@@ -85,6 +85,23 @@ bool MyLeetCode::isOneBitCharacter(vector<int> &bits) {
     return flag;
 }
 
+/*
+ * https://leetcode-cn.com/problems/find-the-duplicate-number/
+ */
+int MyLeetCode::findDuplicate(vector<int> &nums) {
+    int temp;
+    while (true){
+        if(nums[nums[0]]!=nums[0]){
+            temp = nums[0];
+            nums[0] = nums[temp];
+            nums[temp]= temp;
+        }
+        else
+            break;
+    }
+    return nums[0];
+}
+
 
 
 

@@ -18,6 +18,8 @@ public:
     bool isSubsequence(string s, string t);
     // 717. 1比特与2比特字符
     bool isOneBitCharacter(vector<int>& bits);
+    // 287. 寻找重复数
+    int findDuplicate(vector<int>& nums);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H
