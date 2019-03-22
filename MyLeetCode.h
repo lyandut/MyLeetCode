@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 class MyLeetCode {
@@ -20,6 +21,8 @@ public:
     bool isOneBitCharacter(vector<int>& bits);
     // 287. 寻找重复数
     int findDuplicate(vector<int>& nums);
+    // 926. 将字符串翻转到单调递增
+    int minFlipsMonoIncr(string S);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H

@@ -81,7 +81,7 @@ bool MyLeetCode::isOneBitCharacter(vector<int> &bits) {
             break;
         ++iter;
     }
-    bool flag = (count % 2 == 0) ? true : false;
+    bool flag = count % 2 == 0;
     return flag;
 }
 
@@ -100,6 +100,23 @@ int MyLeetCode::findDuplicate(vector<int> &nums) {
             break;
     }
     return nums[0];
+}
+
+/*
+ * https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/
+ */
+int MyLeetCode::minFlipsMonoIncr(string S) {
+    int zeroCount = count(S.begin(), S.end(), '0');
+    int oneCount = count(S.begin(), S.end(), '1');
+    int minCount = S.size();
+    for(int i=0; i<S.size()-1; i++){
+        if(S[i]=='0' && S[i+1]=='1') {
+//            minCount = min(minCount, count(S.begin(), S.begin()+i, '1') + count(S.begin()+i+2, S.end(), '0'));
+            int totalCount = count(S.begin(), S.begin()+i, '1') + count(S.begin()+i+2, S.end(), '0');
+            minCount = minCount < totalCount ? minCount : totalCount;
+        }
+    }
+    return min(min(zeroCount, oneCount), minCount);
 }
 
 
