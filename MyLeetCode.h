@@ -23,6 +23,8 @@ public:
     int findDuplicate(vector<int>& nums);
     // 926. 将字符串翻转到单调递增
     int minFlipsMonoIncr(string S);
+    // 661. 图片平滑器
+    vector<vector<int>> imageSmoother(vector<vector<int>>& M);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H
