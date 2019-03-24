@@ -169,6 +169,9 @@ vector<vector<int>> MyLeetCode::imageSmoother(vector<vector<int>> &M) {
     return avgRes;
 }
 
+/*
+ * https://leetcode-cn.com/problems/missing-number/
+ */
 int MyLeetCode::missingNumber(vector<int> &nums) {
     int n = nums.size();
     for(int i=0; i<nums.size(); i++){
