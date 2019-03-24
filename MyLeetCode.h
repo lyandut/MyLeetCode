@@ -25,6 +25,8 @@ public:
     int minFlipsMonoIncr(string S);
     // 661. 图片平滑器
     vector<vector<int>> imageSmoother(vector<vector<int>>& M);
+    // 268. 缺失数字
+    int missingNumber(vector<int>& nums);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H
