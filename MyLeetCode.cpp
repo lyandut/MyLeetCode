@@ -70,6 +70,7 @@ bool MyLeetCode::isSubsequence(string s, string t) {
 
 /*
  * https://leetcode-cn.com/problems/1-bit-and-2-bit-characters/
+ * [tag] 数学
  */
 bool MyLeetCode::isOneBitCharacter(vector<int> &bits) {
     auto iter = bits.rbegin()+1;
@@ -87,6 +88,7 @@ bool MyLeetCode::isOneBitCharacter(vector<int> &bits) {
 
 /*
  * https://leetcode-cn.com/problems/find-the-duplicate-number/
+ * [tag] O(1)空间交换
  */
 int MyLeetCode::findDuplicate(vector<int> &nums) {
     int temp;
@@ -104,6 +106,7 @@ int MyLeetCode::findDuplicate(vector<int> &nums) {
 
 /*
  * https://leetcode-cn.com/problems/flip-string-to-monotone-increasing/
+ * [tag] 数学
  */
 int MyLeetCode::minFlipsMonoIncr(string S) {
     int zeroCount = count(S.begin(), S.end(), '0');
@@ -121,6 +124,7 @@ int MyLeetCode::minFlipsMonoIncr(string S) {
 
 /*
  * https://leetcode-cn.com/problems/image-smoother/
+ * [tag] 暴力
  */
 vector<vector<int>> MyLeetCode::imageSmoother(vector<vector<int>> &M) {
     int row = M.size();
@@ -171,6 +175,7 @@ vector<vector<int>> MyLeetCode::imageSmoother(vector<vector<int>> &M) {
 
 /*
  * https://leetcode-cn.com/problems/missing-number/
+ * 异或
  */
 int MyLeetCode::missingNumber(vector<int> &nums) {
     int n = nums.size();
@@ -179,4 +184,26 @@ int MyLeetCode::missingNumber(vector<int> &nums) {
         n ^= i;
     }
     return n;
+}
+
+/*
+ * https://leetcode-cn.com/problems/positions-of-large-groups/
+ * 双指针
+ */
+vector<vector<int>> MyLeetCode::largeGroupPositions(string S) {
+    vector<vector<int>> res;
+    for(int i=0, j=i+1; i<S.size() && j<S.size();){
+        if(S[i] == S[j]){
+            j++;
+        }
+        if(S[i] != S[j]){
+            if(j-i>2){
+                vector<int> group = {i, j-1};
+                res.push_back(group);
+            }
+            i = j;
+            j += 1;
+        }
+    }
+    return res;
 }

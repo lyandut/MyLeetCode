@@ -27,6 +27,8 @@ public:
     vector<vector<int>> imageSmoother(vector<vector<int>>& M);
     // 268. 缺失数字
     int missingNumber(vector<int>& nums);
+    // 830. 较大分组的位置
+    vector<vector<int>> largeGroupPositions(string S);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H

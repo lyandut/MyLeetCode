@@ -7,7 +7,10 @@ using namespace std;
 int main() {
 
     MyLeetCode myLeetCode;
-    cout << myLeetCode.minFlipsMonoIncr("011110110111111");
+    vector<vector<int>> res = myLeetCode.largeGroupPositions("abbxxxxzzy");
+    for (auto &re : res) {
+        cout << re[0] << re[1] << endl;
+    }
     cout << endl;
     return 0;
 }
