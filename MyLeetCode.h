@@ -29,6 +29,8 @@ public:
     int missingNumber(vector<int>& nums);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
+    // 48. 旋转图像
+    void rotate(vector<vector<int>>& matrix);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H
