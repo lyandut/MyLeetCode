@@ -224,3 +224,28 @@ void MyLeetCode::rotate(vector<vector<int>> &matrix) {
         }
     }
 }
+
+/*
+ * https://leetcode-cn.com/problems/combination-sum/comments/
+ * 递归、回溯、动态规划、BFS
+ */
+vector<vector<int>> MyLeetCode::combinationSum(vector<int> &candidates, int target) {
+    vector<vector<int>> Res;
+    vector<int> Sum;
+    sort(candidates.begin(), candidates.end());
+    recursive(candidates, target, Res, Sum, 0);
+    return Res;
+}
+
+void MyLeetCode::recursive(vector<int> &candidates, int target, vector<vector<int>> &Res, vector<int> &Sum, int index){
+    if (target == 0){
+        Res.push_back(Sum);
+        return;
+    }
+    if(target < 0) return;
+    for(int i=index; i<candidates.size(); i++){
+        Sum.push_back(candidates[i]);
+        recursive(candidates, target-candidates[i], Res, Sum, i);
+        Sum.pop_back();
+    }
+}

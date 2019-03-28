@@ -31,6 +31,9 @@ public:
     vector<vector<int>> largeGroupPositions(string S);
     // 48. 旋转图像
     void rotate(vector<vector<int>>& matrix);
+    // 39. 组合总和
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target);
+    void recursive(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H
