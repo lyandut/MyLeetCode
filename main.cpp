@@ -7,10 +7,8 @@ using namespace std;
 int main() {
 
     MyLeetCode myLeetCode;
-    vector<vector<int>> res = myLeetCode.largeGroupPositions("abbxxxxzzy");
-    for (auto &re : res) {
-        cout << re[0] << re[1] << endl;
-    }
+    myLeetCode.book(1, 3);
+    cout << get<2>(myLeetCode.startEndInterval[0]);
     cout << endl;
     return 0;
 }

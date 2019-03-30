@@ -9,6 +9,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <tuple>
 using namespace std;
 
 class MyLeetCode {
@@ -34,6 +35,14 @@ public:
     // 39. 组合总和
     vector<vector<int>> combinationSum(vector<int>& candidates, int target);
     void recursive(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
+    // 729. 我的日程安排表 I
+    vector<tuple<int, int, int>> startEndInterval;
+    bool book(int start, int end);
+    // 121. 买卖股票的最佳时机
+    int maxProfit(vector<int>& prices);
+    // 62. 不同路径
+    int uniquePaths(int m, int n);
+
 };
 
 #endif //MYLEETCODE_MYLEETCODE_H

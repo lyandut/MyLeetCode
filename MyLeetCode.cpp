@@ -249,3 +249,69 @@ void MyLeetCode::recursive(vector<int> &candidates, int target, vector<vector<in
         Sum.pop_back();
     }
 }
+
+
+/*
+ * https://leetcode-cn.com/problems/my-calendar-i/
+ * 优化：二分查找插入、BST
+ */
+bool MyLeetCode::book(int start, int end) {
+    if(startEndInterval.empty()){
+        startEndInterval.emplace_back(start, end, end-start);
+        return true;
+    }
+    if(start >= get<1>(*startEndInterval.rbegin())){
+        startEndInterval.emplace_back(start, end, end-start);
+        return true;
+    }
+    if(end <= get<0>(*startEndInterval.begin())){
+        startEndInterval.insert(startEndInterval.begin(), make_tuple(start, end, end-start));
+        return true;
+    }
+    else{
+        for(int i=0; i<startEndInterval.size(); i++){
+            if(start >= get<1>(startEndInterval[i]) && end <= get<0>(startEndInterval[i+1])){
+                startEndInterval.insert(startEndInterval.begin()+i+1, make_tuple(start, end, end-start));
+                return true;
+            }
+            if(start >= get<0>(startEndInterval[i]) && start < get<1>(startEndInterval[i]))
+                return false;
+            if(end > get<0>(startEndInterval[i]) && end < get<1>(startEndInterval[i]))
+                return false;
+        }
+    }
+    return false;
+}
+
+/*
+ * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+ */
+int MyLeetCode::maxProfit(vector<int> &prices) {
+    int maxPro = 0;
+    for(int i=0; i<prices.size(); i++){
+        for(int j=i+1; j<prices.size(); j++) {
+            if (prices[j] > prices[i] && maxPro < prices[j] - prices[i])
+                maxPro = prices[j] - prices[i];
+        }
+    }
+    return maxPro;
+}
+
+/*
+ * https://leetcode-cn.com/problems/unique-paths/
+ * 递归、动态规划
+ */
+int MyLeetCode::uniquePaths(int m, int n) {
+    vector<vector<int>> Paths(m+1, vector<int>(n+1, 0));
+    for(int i=1; i<=m; i++){
+        for(int j=1; j<=n; j++) {
+            if (i == 1 || j == 1)
+                Paths[i][j] = 1;
+            else {
+                Paths[i][j] = Paths[i - 1][j] + Paths[i][j - 1];
+            }
+        }
+    }
+    return Paths[m][n];
+}
+
