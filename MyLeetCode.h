@@ -42,6 +42,9 @@ public:
     int maxProfit(vector<int>& prices);
     // 62. 不同路径
     int uniquePaths(int m, int n);
+    // 746. 使用最小花费爬楼梯
+    int minCostClimbingStairs(vector<int>& cost);
+    int _minCostClimbingStairs(vector<int> &cost, int n);
 
 };
 

@@ -315,3 +315,27 @@ int MyLeetCode::uniquePaths(int m, int n) {
     return Paths[m][n];
 }
 
+/*
+ * https://leetcode-cn.com/problems/min-cost-climbing-stairs/
+ * 【专题】Array；Dynamic Programming
+ */
+int MyLeetCode::minCostClimbingStairs(vector<int> &cost) {
+    cost.push_back(0);
+    return _minCostClimbingStairs(cost, cost.size());
+}
+
+int MyLeetCode::_minCostClimbingStairs(vector<int> &cost, int n) {
+//    if(n==0 || n==1) {
+//        return cost[n];
+//    }
+//    return min(_minCostClimbingStairs(cost, n-1), _minCostClimbingStairs(cost, n-2)) + cost[n];
+    vector<int> Costs(n, 0);
+    for(int i=0; i<n; i++){
+        if(i==0 || i==1)
+            Costs[i] = cost[i];
+        else
+            Costs[i] = min(Costs[i-1], Costs[i-2]) + cost[i];
+    }
+    return Costs[n-1];
+}
+
