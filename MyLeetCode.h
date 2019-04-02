@@ -45,6 +45,11 @@ public:
     // 746. 使用最小花费爬楼梯
     int minCostClimbingStairs(vector<int>& cost);
     int _minCostClimbingStairs(vector<int> &cost, int n);
+    // 64. 最小路径和
+    int minPathSum(vector<vector<int>>& grid);
+    int _minPathSum(vector<vector<int>> &grid, int m, int n);
+    // 873. 最长的斐波那契子序列的长度
+    int lenLongestFibSubseq(vector<int>& A);
 
 };
 
