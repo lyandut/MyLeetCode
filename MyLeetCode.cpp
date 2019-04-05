@@ -371,9 +371,33 @@ int MyLeetCode::_minPathSum(vector<vector<int>> &grid, int m, int n){
  * https://leetcode-cn.com/problems/length-of-longest-fibonacci-subsequence/
  * 【专题】Array；Dynamic Programming
  */
+/*
+ * 解法1. 暴力搜索，26/33个通过测试用例
+ */
+//int MyLeetCode::lenLongestFibSubseq(vector<int> &A) {
+//    int result = 0;
+//    for(int i=0; i<A.size()-2; i++){
+//        for(int j=i+1; j<A.size()-1; j++){
+//            int length = 2;
+//            auto iIter = A.begin() + i;
+//            auto jIter = A.begin() + j;
+//            auto fibIter = find(jIter+1, A.end(), *iIter + *jIter);
+//            while(fibIter != A.end()){
+//                length++;
+//                iIter = jIter;
+//                jIter = fibIter;
+//                fibIter = find(jIter+1, A.end(), *iIter + *jIter);
+//            }
+//            result = result > length ? result : length;
+//        }
+//    }
+//    return result > 2 ? result : 0;
+//}
+/*
+ * 解法2. 动态规划
+ */
 int MyLeetCode::lenLongestFibSubseq(vector<int> &A) {
+    vector<vector<int>> dp(A.size(), vector<int>(A.size(), 2));
+    for(int )
 
-
-    return 0;
 }
-
