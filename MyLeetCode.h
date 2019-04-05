@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 #include <algorithm>
 #include <tuple>
 using namespace std;
@@ -50,6 +51,10 @@ public:
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
     // 873. 最长的斐波那契子序列的长度
     int lenLongestFibSubseq(vector<int>& A);
+    // 59. 螺旋矩阵 II
+    vector<vector<int>> generateMatrix(int n);
+    // 1007. Minimum Domino Rotations For Equal Row
+    int minDominoRotations(vector<int>& A, vector<int>& B);
 
 };
 

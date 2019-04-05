@@ -317,7 +317,7 @@ int MyLeetCode::uniquePaths(int m, int n) {
 
 /*
  * https://leetcode-cn.com/problems/min-cost-climbing-stairs/
- * 【专题】Array；Dynamic Programming
+ *【专题】Array；Dynamic Programming
  */
 int MyLeetCode::minCostClimbingStairs(vector<int> &cost) {
     cost.push_back(0);
@@ -341,7 +341,7 @@ int MyLeetCode::_minCostClimbingStairs(vector<int> &cost, int n) {
 
 /*
  * https://leetcode-cn.com/problems/minimum-path-sum/
- * 【专题】Array；Dynamic Programming
+ *【专题】Array；Dynamic Programming
  */
 int MyLeetCode::minPathSum(vector<vector<int>> &grid) {
     int m = grid.size();
@@ -369,7 +369,7 @@ int MyLeetCode::_minPathSum(vector<vector<int>> &grid, int m, int n){
 
 /*
  * https://leetcode-cn.com/problems/length-of-longest-fibonacci-subsequence/
- * 【专题】Array；Dynamic Programming
+ *【专题】Array；Dynamic Programming
  */
 /*
  * 解法1. 暴力搜索，26/33个通过测试用例
@@ -395,9 +395,75 @@ int MyLeetCode::_minPathSum(vector<vector<int>> &grid, int m, int n){
 //}
 /*
  * 解法2. 动态规划
+ * A[i] = A[j] + A[k]
+ * dp[i][j] = dp[j][k] + 1
  */
 int MyLeetCode::lenLongestFibSubseq(vector<int> &A) {
+    map<int, int> valueIndex;
+    for(int i=0; i<A.size(); i++) {
+        valueIndex[A[i]] = i;
+    }
+    int result = 0;
     vector<vector<int>> dp(A.size(), vector<int>(A.size(), 2));
-    for(int )
-
+    for(int i=0; i<A.size(); i++){
+        for(int j=0; j<i; j++){
+            int Ak = A[i] - A[j];
+            if(Ak < A[j] && valueIndex.count(Ak)){
+                int k = valueIndex[Ak];
+                dp[i][j] = dp[j][k] + 1;
+                result = result > dp[i][j] ? result : dp[i][j];
+            }
+        }
+    }
+    return result > 2 ? result : 0;
 }
+
+/*
+ * https://leetcode-cn.com/problems/spiral-matrix-ii/
+ *【专题】Array
+ */
+vector<vector<int>> MyLeetCode::generateMatrix(int n) {
+    vector<vector<int>> Matrix(n, vector<int>(n));
+    int iter = 0;
+    int val = 1;
+    while(val <= n*n){
+        for(int i=iter; i<n-iter; i++)
+            Matrix[iter][i] = val++;
+        for(int i=iter+1; i<n-iter; i++)
+            Matrix[i][n-1-iter] = val++;
+        for(int i=n-2-iter; i>=iter; i--)
+            Matrix[n-1-iter][i] = val++;
+        for(int i=n-2-iter; i>iter; i--)
+            Matrix[i][iter] = val++;
+
+        iter++;
+    }
+    return Matrix;
+}
+
+
+/*
+ * https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
+ *【专题】Array；Greedy
+ */
+int MyLeetCode::minDominoRotations(vector<int> &A, vector<int> &B) {
+    int length = A.size();
+    int sameA = A[0], sameB = B[0];
+    int i, resA = 0, resB = 0;
+    for(i=0; i<length; i++){
+        if(!(A[i] == sameA || B[i] == sameA))   break;
+        if(A[i] != sameA)   resA++;
+        if(B[i] != sameA)   resB++;
+        if(i == length-1)   return resA > resB ? resB : resA;
+    }
+    resA = 0, resB = 0;
+    for(i=0; i<length; i++){
+        if(A[i] != sameB && B[i] != sameB)  break;
+        if(A[i] != sameB)   resA++;
+        if(B[i] != sameB)   resB++;
+        if(i == length-1)   return resA > resB ? resB : resA;
+    }
+
+    return -1;
+}
+
