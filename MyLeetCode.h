@@ -55,6 +55,8 @@ public:
     vector<vector<int>> generateMatrix(int n);
     // 1007. Minimum Domino Rotations For Equal Row
     int minDominoRotations(vector<int>& A, vector<int>& B);
+    // 1014. Best Sightseeing Pair
+    int maxScoreSightseeingPair(vector<int>& A);
 
 };
 
