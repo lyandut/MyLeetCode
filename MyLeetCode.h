@@ -57,6 +57,13 @@ public:
     int minDominoRotations(vector<int>& A, vector<int>& B);
     // 1014. Best Sightseeing Pair
     int maxScoreSightseeingPair(vector<int>& A);
+    // 768. 最多能完成排序的块 II
+    int maxChunksToSorted(vector<int>& arr);
+    // 118. 杨辉三角
+    vector<vector<int>> generate(int numRows);
+    // 621. 任务调度器
+    int leastInterval(vector<char>& tasks, int n);
+
 
 };
 

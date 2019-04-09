@@ -482,3 +482,52 @@ int MyLeetCode::maxScoreSightseeingPair(vector<int> &A) {
     return maxScore;
 }
 
+/*
+ * https://leetcode-cn.com/problems/max-chunks-to-make-sorted-ii/comments/
+ *【专题】Array
+ */
+int MyLeetCode::maxChunksToSorted(vector<int> &arr) {
+
+
+    return 0;
+}
+
+/*
+ * https://leetcode-cn.com/problems/pascals-triangle/
+ *【专题】Array
+ */
+vector<vector<int>> MyLeetCode::generate(int numRows) {
+    vector<vector<int>> PascalsTriangle;
+    PascalsTriangle.reserve(numRows);
+    if (numRows <= 0)
+        return PascalsTriangle;
+
+    PascalsTriangle.emplace_back(vector<int>(1, 1));
+    int right, left;
+    for(int i=1; i<numRows; i++) {
+        vector<int> ithRow;
+        for(int j=0; j<=i; j++){
+            right = i-1 < j ? 0 : PascalsTriangle[i-1][j];
+            left = j-1 < 0 ? 0 : PascalsTriangle[i-1][j-1];
+            ithRow.push_back(right + left);
+        }
+        PascalsTriangle.push_back(ithRow);
+    }
+    return PascalsTriangle;
+}
+
+/*
+ * https://leetcode-cn.com/problems/task-scheduler/
+ *【专题】Array；Greedy；Queue
+ */
+int MyLeetCode::leastInterval(vector<char> &tasks, int n) {
+    vector<int> taskCout(26, 0);
+    int maxLength = 0;
+    for(auto i : tasks){
+        taskCout[i - 'A']++;
+        maxLength = max(taskCout[i - 'A'], maxLength);
+    }
+    int taskKind = count(taskCout.begin(), taskCout.end(), maxLength);
+    return max((n+1) * (maxLength-1) + taskKind, (int)tasks.size());
+}
+
