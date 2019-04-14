@@ -53,10 +53,10 @@ public:
     // 746. 使用最小花费爬楼梯
     int minCostClimbingStairs(vector<int>& cost);
     int _minCostClimbingStairs(vector<int> &cost, int n);
-    // 768. 最多能完成排序的块 II
-    int maxChunksToSortedII(vector<int>& arr);
     // 768. 最多能完成排序的块
     int maxChunksToSorted(vector<int>& arr);
+    // 769. 最多能完成排序的块 II
+    int maxChunksToSortedII(vector<int>& arr);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
     // 873. 最长的斐波那契子序列的长度
