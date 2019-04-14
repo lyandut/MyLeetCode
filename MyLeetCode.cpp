@@ -52,9 +52,6 @@ int MyLeetCode::singleNonDuplicate(vector<int> &nums) {
 /*
  * https://leetcode-cn.com/problems/is-subsequence/
  */
-/*
- * 方法一: 双指针
- */
 bool MyLeetCode::isSubsequence(string s, string t) {
     if(s.length()==0 && t.length()==0)
         return true;
@@ -483,12 +480,35 @@ int MyLeetCode::maxScoreSightseeingPair(vector<int> &A) {
 }
 
 /*
+ * https://leetcode-cn.com/problems/max-chunks-to-make-sorted/
+ */
+int MyLeetCode::maxChunksToSorted(vector<int> &arr) {
+    int left = 0, right = 0;
+    int res = 0;
+    while(left < arr.size()){
+        right = arr[left];
+        while(left < right){
+            left++;
+            right = max(right, arr[left]);
+        }
+        res++;
+        left++;
+    }
+    return res;
+}
+
+/*
  * https://leetcode-cn.com/problems/max-chunks-to-make-sorted-ii/comments/
  *【专题】Array
  */
-int MyLeetCode::maxChunksToSorted(vector<int> &arr) {
+int MyLeetCode::maxChunksToSortedII(vector<int> &arr) {
+    int left = 0, right = 0;
+    int res = 0;
+    auto brr = arr;
+    sort(brr.begin(), brr.end());
+    while(left < right) {
 
-
+    }
     return 0;
 }
 
@@ -531,3 +551,56 @@ int MyLeetCode::leastInterval(vector<char> &tasks, int n) {
     return max((n+1) * (maxLength-1) + taskKind, (int)tasks.size());
 }
 
+/*
+ * https://leetcode.com/problems/binary-prefix-divisible-by-5/
+ *【专题】Array
+ */
+vector<bool> MyLeetCode::prefixesDivBy5(vector<int> &A) {
+    vector<bool> res;
+    res.reserve(A.size());
+    int iAnswer = 0;
+    for(int a : A){
+        iAnswer = (iAnswer * 2 + a) % 5;
+        res.push_back(iAnswer == 0);
+    }
+    return res;
+}
+
+/*
+ * https://leetcode.com/problems/add-to-array-form-of-integer/
+ *【专题】Array
+ */
+vector<int> MyLeetCode::addToArrayForm(vector<int> &A, int K) {
+    int index = A.size();
+    while(index && K){
+        K = A[index - 1] + K;
+        A[index - 1] = K % 10;
+        K /= 10;
+        index--;
+    }
+    while(K){
+        A.insert(A.begin(), K % 10);
+        K /= 10;
+    }
+    return A;
+}
+
+/*
+ * https://leetcode-cn.com/problems/valid-triangle-number/
+ *【专题】Array
+ */
+int MyLeetCode::triangleNumber(vector<int> &nums) {
+    int count = 0;
+    sort(nums.begin(), nums.end());
+    for(int i=2; i<nums.size(); i++){
+        for(int j=0; j<i-1; j++){
+            for(int k=j+1; k<i; k++){
+                if(nums[j] + nums[k] > nums[i]){
+                    count += i - k;
+                    break;
+                }
+            }
+        }
+    }
+    return count;
+}
