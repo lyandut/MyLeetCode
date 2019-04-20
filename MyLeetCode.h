@@ -15,6 +15,8 @@ using namespace std;
 
 class MyLeetCode {
 public:
+    // 27. 移除元素
+    int removeElement(vector<int>& nums, int val);
     // 39. 组合总和
     vector<vector<int>> combinationSum(vector<int>& candidates, int target);
     void recursive(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
@@ -67,6 +69,8 @@ public:
     vector<int> addToArrayForm(vector<int>& A, int K);
     // 1007. Minimum Domino Rotations For Equal Row
     int minDominoRotations(vector<int>& A, vector<int>& B);
+    // 1010. Pairs of Songs With Total Durations Divisible by 60
+    int numPairsDivisibleBy60(vector<int>& time);
     // 1014. Best Sightseeing Pair
     int maxScoreSightseeingPair(vector<int>& A);
     // 1018. Binary Prefix Divisible By 5
