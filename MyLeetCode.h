@@ -47,6 +47,10 @@ public:
     int leastInterval(vector<char>& tasks, int n);
     // 661. 图片平滑器
     vector<vector<int>> imageSmoother(vector<vector<int>>& M);
+    // 674. 最长连续递增序列
+    int findLengthOfLCIS(vector<int>& nums);
+    // 689. 三个无重叠子数组的最大和
+    vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k);
     // 717. 1比特与2比特字符
     bool isOneBitCharacter(vector<int>& bits);
     // 729. 我的日程安排表 I

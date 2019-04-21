@@ -651,8 +651,101 @@ int MyLeetCode::numPairsDivisibleBy60(vector<int> &time) {
     return count;
 }
 
+/*
+ * https://leetcode-cn.com/problems/remove-element/
+ *【专题】Array；Two Pointers
+ */
 int MyLeetCode::removeElement(vector<int> &nums, int val) {
+    int left = 0;
+    int right = nums.size() - 1;
+    while (left <= right){
+        while(left < nums.size() && nums[left] != val) { left++; }
+        while(right >= 0 && nums[right] == val) { right--; }
+        if(left < right) {
+            int tmp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = tmp;
+        }
+    }
+    return left;
+}
 
+/*
+ * https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/
+ *【专题】Array
+ */
+int MyLeetCode::findLengthOfLCIS(vector<int> &nums) {
+    if(nums.empty()) { return 0; }
+    int head = -1;
+    int maxSize = 0;
+    for(int i=0; i<nums.size(); i++){
+        if((i<nums.size()-1 && nums[i] >= nums[i+1]) || i==nums.size()-1) {
+            maxSize = max(maxSize, i - head);
+            head = i;
+        }
+    }
+    return maxSize;
+}
 
-    return 0;
+/*
+ * https://leetcode-cn.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
+ *【专题】Array；Dynamic Programming
+ */
+vector<int> MyLeetCode::maxSumOfThreeSubarrays(vector<int> &nums, int k) {
+    int length = nums.size();
+    vector<int> sum(length, nums[0]);
+    for(int i=1; i<length; i++){
+        sum[i] = sum[i-1] + nums[i];
+    }
+    int firstMaxIndex = length - 2 * k - 1;
+    int thirdMinIndex = 2 * k;
+    int secondMinIndex = k;
+    int secondMaxIndex = length - k - 1;
+    vector<pair<int, int>> firstDp(firstMaxIndex + 1, make_pair(0, 0));
+    vector<pair<int, int>> thirdDp(length, make_pair(length-k, 0));
+    int newSum;
+    for(int i=0; i<=firstMaxIndex; i++){
+        if(i < secondMinIndex){
+            newSum = sum[k-1];
+            firstDp[i].first = 0;
+            firstDp[i].second = newSum;
+        }
+        else{
+            newSum = sum[i] - sum[i-k];
+            if(newSum > firstDp[i-1].second){
+                firstDp[i].first = i-k+1;
+                firstDp[i].second = newSum;
+            }
+            else{
+                firstDp[i] = firstDp[i-1];
+            }
+        }
+    }
+    for(int i=length-1; i>=thirdMinIndex; i--){
+        if(i > secondMaxIndex) {
+            newSum = sum[length-1] - sum[length-1-k];
+            thirdDp[i].first = length-k;
+            thirdDp[i].second = newSum;
+        }
+        else{
+            newSum = sum[i+k-1] - sum[i-1];
+            if(newSum >= thirdDp[i+1].second){
+                thirdDp[i].first = i;
+                thirdDp[i].second = newSum;
+            }
+            else{
+                thirdDp[i] = thirdDp[i+1];
+            }
+        }
+    }
+    int total = 0;
+    vector<int> res;
+    for(int i=secondMinIndex; i<=secondMaxIndex-k+1; i++) {
+        newSum = sum[i+k-1] - sum[i-1];
+        if(newSum + firstDp[i-1].second + thirdDp[i+k].second > total){
+            total = newSum + firstDp[i-1].second + thirdDp[i+k].second;
+            res = {firstDp[i-1].first, i, thirdDp[i+k].first};
+        }
+    }
+    return res;
 }
