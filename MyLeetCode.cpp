@@ -565,6 +565,29 @@ vector<vector<int>> MyLeetCode::generate(int numRows) {
 }
 
 /*
+ * https://leetcode-cn.com/problems/pascals-triangle-ii/
+ *【专题】Array
+ */
+vector<int> MyLeetCode::getRow(int rowIndex) {
+    int numRows = rowIndex + 1;
+    vector<vector<int>> PascalsTriangle;
+    PascalsTriangle.reserve(numRows);
+
+    PascalsTriangle.emplace_back(vector<int>(1, 1));
+    int right, left;
+    for(int i=1; i<numRows; i++) {
+        vector<int> ithRow;
+        for(int j=0; j<=i; j++){
+            right = i-1 < j ? 0 : PascalsTriangle[i-1][j];
+            left = j-1 < 0 ? 0 : PascalsTriangle[i-1][j-1];
+            ithRow.push_back(right + left);
+        }
+        PascalsTriangle.push_back(ithRow);
+    }
+    return PascalsTriangle[rowIndex];
+}
+
+/*
  * https://leetcode-cn.com/problems/task-scheduler/
  *【专题】Array；Greedy；Queue
  */
@@ -748,4 +771,78 @@ vector<int> MyLeetCode::maxSumOfThreeSubarrays(vector<int> &nums, int k) {
         }
     }
     return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/container-with-most-water/
+ *【专题】Array；Two Pointers
+ */
+int MyLeetCode::maxArea(vector<int> &height) {
+    int left = 0, right = height.size() - 1;
+    int result = 0;
+    while(left < right){
+        int newContain = min(height[left], height[right]) * (right - left);
+        if(newContain > result) {
+            result = newContain;
+        }
+        if(height[left] < height[right]){
+            left++;
+        } else{
+            right--;
+        }
+    }
+    return result;
+}
+
+/*
+ * https://leetcode.com/problems/subarray-sums-divisible-by-k/
+ *【专题】Array；Hash Table
+ */
+int MyLeetCode::subarraysDivByK(vector<int> &A, int K) {
+    int res = 0;
+    vector<int> subArraySum(A.size()+1, 0);
+    vector<int> hashTable(K, 0);
+    hashTable[(subArraySum[0] % K + K) % K]++;
+    for(int i=0; i<A.size(); i++){
+        subArraySum[i+1] = subArraySum[i] + A[i];
+        hashTable[(subArraySum[i+1] % K + K) % K]++;
+    }
+    for(auto each : hashTable) {
+        res += each * (each-1) / 2;
+    }
+    return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/two-sum/
+ *【专题】Array；Hash Table
+ */
+vector<int> MyLeetCode::twoSum(vector<int> &nums, int target) {
+    vector<int> res(2);
+    for(int i=0; i<nums.size(); i++){
+        for(int j=i+1; j<nums.size(); j++){
+            if(nums[i] + nums[j] == target){
+                res = {i, j};
+                return res;
+            }
+        }
+    }
+    return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/maximum-subarray/
+ *【专题】Array；Divide and Conquer；Dynamic Programming
+ */
+int MyLeetCode::maxSubArray(vector<int> &nums) {
+    vector<int> dp(nums.size()+1, INT_MIN);
+    for(int i=0; i<nums.size(); i++){
+        if(dp[i] < 0){
+            dp[i+1] = nums[i];
+        }
+        else{
+            dp[i+1] = dp[i]+nums[i];
+        }
+    }
+    return *max_element(dp.begin(), dp.end());
 }

@@ -15,6 +15,10 @@ using namespace std;
 
 class MyLeetCode {
 public:
+    // 1. Two Sum
+    vector<int> twoSum(vector<int>& nums, int target);
+    // 11. 盛最多水的容器
+    int maxArea(vector<int>& height);
     // 27. 移除元素
     int removeElement(vector<int>& nums, int val);
     // 39. 组合总和
@@ -22,6 +26,8 @@ public:
     void recursive(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
     // 48. 旋转图像
     void rotate(vector<vector<int>>& matrix);
+    // 53. 最大子序和
+    int maxSubArray(vector<int>& nums);
     // 59. 螺旋矩阵 II
     vector<vector<int>> generateMatrix(int n);
     // 62. 不同路径
@@ -31,6 +37,8 @@ public:
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
     // 118. 杨辉三角
     vector<vector<int>> generate(int numRows);
+    // 119. 杨辉三角 II
+    vector<int> getRow(int rowIndex);
     // 121. 买卖股票的最佳时机
     int maxProfit(vector<int>& prices);
     // 268. 缺失数字
@@ -69,6 +77,8 @@ public:
     int lenLongestFibSubseq(vector<int>& A);
     // 926. 将字符串翻转到单调递增
     int minFlipsMonoIncr(string S);
+    // 974. Subarray Sums Divisible by K
+    int subarraysDivByK(vector<int>& A, int K);
     // 989. Add to Array-Form of Integer
     vector<int> addToArrayForm(vector<int>& A, int K);
     // 1007. Minimum Domino Rotations For Equal Row
