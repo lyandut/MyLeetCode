@@ -41,6 +41,8 @@ public:
     vector<int> getRow(int rowIndex);
     // 121. 买卖股票的最佳时机
     int maxProfit(vector<int>& prices);
+    // 153. 寻找旋转排序数组中的最小值
+    int findMin(vector<int>& nums);
     // 268. 缺失数字
     int missingNumber(vector<int>& nums);
     // 287. 寻找重复数
@@ -71,6 +73,8 @@ public:
     int maxChunksToSorted(vector<int>& arr);
     // 769. 最多能完成排序的块 II
     int maxChunksToSortedII(vector<int>& arr);
+    // 795. 区间子数组个数
+    int numSubarrayBoundedMax(vector<int>& A, int L, int R);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
     // 873. 最长的斐波那契子序列的长度
