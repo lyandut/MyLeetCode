@@ -880,3 +880,79 @@ int MyLeetCode::findMin(vector<int> &nums) {
     }
     return min(nums[left], nums[right]);
 }
+
+/*
+ * https://leetcode-cn.com/problems/partition-array-into-disjoint-intervals/
+ *【专题】Array
+ */
+int MyLeetCode::partitionDisjoint(vector<int> &A) {
+    int left = 0, right = A.size() - 1;
+    int leftMax = A[left], rightMin = A[right];
+    while(left != right-1){
+        while(A[left+1] < leftMax) { left++; }
+        while(A[right-1] >= leftMax && right-1 > left) {
+            rightMin = min(A[right-1], rightMin);
+            right--;
+        }
+        for(int i=left; i<right; i++){
+            leftMax = max(leftMax, A[i]);
+        }
+        left = right - 1;
+        if(leftMax > rightMin){
+            right = A.size() - 1;
+            rightMin = A[right];
+        }
+    }
+    return right;
+}
+
+/*
+ * https://leetcode-cn.com/problems/minimum-increment-to-make-array-unique/
+ *【专题】Array
+ */
+int MyLeetCode::minIncrementForUnique(vector<int> &A) {
+    int res = 0;
+    vector<int> vec(40001, 0);
+    vector<int> dupVec;
+    for(int each : A){
+        vec[each]++;
+        if(vec[each]>1) { dupVec.push_back(each); }
+    }
+    if(dupVec.empty()) { return 0; }
+    sort(dupVec.begin(), dupVec.end());
+    auto iter = dupVec.begin();
+    for(int i=(*iter)+1; iter!=dupVec.end(); i++){
+        if(vec[i]==0 && i>(*iter)) {
+            res += i-(*iter);
+            vec[i]++;
+            iter++;
+        }
+    }
+    return res;
+}
+
+int MyLeetCode::numMatchingSubseq(string S, vector<string> &words) {
+    int count = 0;
+    unordered_map<char, vector<int>> hashMap;
+    for(int i=0 ; i<S.size(); i++){
+        hashMap[S[i]].push_back(i);
+    }
+    for(string &word : words){
+        if(hashMap[word[0]].empty()) { continue; }
+        int currIndex = hashMap[word[0]][0];
+        int j;
+        for(j=1; j<word.size(); j++){
+            if(hashMap[word[j]].empty()) { break; }
+            int oldIndex = currIndex;
+            for(int hashIndex : hashMap[word[j]]){
+                if(hashIndex > currIndex) {
+                    currIndex = hashIndex;
+                    break;
+                }
+            }
+            if(currIndex == oldIndex) { break; }
+        }
+        if(j == word.size()) { count++; }
+    }
+    return count;
+}
