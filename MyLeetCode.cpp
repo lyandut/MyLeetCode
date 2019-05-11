@@ -931,6 +931,10 @@ int MyLeetCode::minIncrementForUnique(vector<int> &A) {
     return res;
 }
 
+/*
+ * https://leetcode.com/problems/number-of-matching-subsequences/
+ *【专题】Array
+ */
 int MyLeetCode::numMatchingSubseq(string S, vector<string> &words) {
     int count = 0;
     unordered_map<char, vector<int>> hashMap;
@@ -956,3 +960,80 @@ int MyLeetCode::numMatchingSubseq(string S, vector<string> &words) {
     }
     return count;
 }
+
+/*
+ * https://leetcode-cn.com/problems/advantage-shuffle/
+ *【专题】Array
+ */
+vector<int> MyLeetCode::advantageCount(vector<int> &A, vector<int> &B) {
+    int length = A.size();
+    vector<int> res(length);
+    multimap<int, int> bIndexMap;
+    for(int i=0; i<length; i++){
+        bIndexMap.insert(make_pair(B[i], i));
+    }
+    sort(A.begin(), A.end());
+    auto r_iter = bIndexMap.rbegin();
+    int left = 0, right = length - 1;
+    while(left <= right){
+        if((*r_iter).first >= A[right]){
+            res[(*r_iter).second] = A[left++];
+        }
+        else{
+            res[(*r_iter).second] = A[right--];
+        }
+        r_iter++;
+    }
+    return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/subsets/
+ *【专题】Array
+ */
+vector<vector<int>> MyLeetCode::subsets(vector<int> &nums) {
+    vector<vector<int>> res;
+    res.emplace_back(vector<int>());
+    for(int num : nums){
+        auto subSet = res;
+        for(auto each : subSet){
+            each.push_back(num);
+            res.push_back(each);
+        }
+    }
+    return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/subsets-ii/
+ *【专题】Array
+ */
+vector<vector<int>> MyLeetCode::subsetsWithDup(vector<int> &nums) {
+    vector<vector<int>> res;
+    res.emplace_back(vector<int>());
+    sort(nums.begin(), nums.end());
+    int dupCount = 0;
+    for(int i=0; i<nums.size(); i++){
+        if(i!=0 && nums[i]==nums[i-1]){
+            dupCount++;
+            auto subSet = res;
+            for(auto each : subSet){
+                if(count(each.begin(), each.end(), nums[i]) == dupCount){
+                    each.push_back(nums[i]);
+                    res.push_back(each);
+                }
+            }
+        }
+        else{
+            dupCount = 0;
+            auto subSet = res;
+            for(auto each : subSet){
+                each.push_back(nums[i]);
+                res.push_back(each);
+            }
+        }
+
+    }
+    return res;
+}
+

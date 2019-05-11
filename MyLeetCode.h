@@ -36,6 +36,10 @@ public:
     // 64. 最小路径和
     int minPathSum(vector<vector<int>>& grid);
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
+    // 78. 子集
+    vector<vector<int>> subsets(vector<int>& nums);
+    // 90. 子集 II
+    vector<vector<int>> subsetsWithDup(vector<int>& nums);
     // 118. 杨辉三角
     vector<vector<int>> generate(int numRows);
     // 119. 杨辉三角 II
@@ -80,6 +84,8 @@ public:
     int numSubarrayBoundedMax(vector<int>& A, int L, int R);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
+    // 870. 优势洗牌
+    vector<int> advantageCount(vector<int>& A, vector<int>& B);
     // 873. 最长的斐波那契子序列的长度
     int lenLongestFibSubseq(vector<int>& A);
     // 915. 分割数组
