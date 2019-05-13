@@ -223,18 +223,18 @@ void MyLeetCode::rotate(vector<vector<int>> &matrix) {
 }
 
 /*
- * https://leetcode-cn.com/problems/combination-sum/comments/
- * 递归、回溯、动态规划、BFS
+ * https://leetcode-cn.com/problems/combination-sum/
+ * 递归、回溯
  */
 vector<vector<int>> MyLeetCode::combinationSum(vector<int> &candidates, int target) {
     vector<vector<int>> Res;
     vector<int> Sum;
     sort(candidates.begin(), candidates.end());
-    recursive(candidates, target, Res, Sum, 0);
+    _combinationSum(candidates, target, Res, Sum, 0);
     return Res;
 }
 
-void MyLeetCode::recursive(vector<int> &candidates, int target, vector<vector<int>> &Res, vector<int> &Sum, int index){
+void MyLeetCode::_combinationSum(vector<int> &candidates, int target, vector<vector<int>> &Res, vector<int> &Sum, int index){
     if (target == 0){
         Res.push_back(Sum);
         return;
@@ -242,11 +242,36 @@ void MyLeetCode::recursive(vector<int> &candidates, int target, vector<vector<in
     if(target < 0) return;
     for(int i=index; i<candidates.size(); i++){
         Sum.push_back(candidates[i]);
-        recursive(candidates, target-candidates[i], Res, Sum, i);
+        _combinationSum(candidates, target-candidates[i], Res, Sum, i);
         Sum.pop_back();
     }
 }
 
+/*
+ * https://leetcode-cn.com/problems/combination-sum-ii/
+ *【专题】Array；Back Tracking
+ */
+vector<vector<int>> MyLeetCode::combinationSum2(vector<int> &candidates, int target) {
+    vector<vector<int>> Res;
+    vector<int> Sum;
+    sort(candidates.begin(), candidates.end());
+    _combinationSum2(candidates, target, Res, Sum, 0);
+    return Res;
+}
+
+void MyLeetCode::_combinationSum2(vector<int> &candidates, int target, vector<vector<int>> &Res, vector<int> &Sum, int index){
+    if (target == 0){
+        Res.push_back(Sum);
+        return;
+    }
+    if(target < 0) return;
+    for(int i=index; i<candidates.size(); i++){
+        if(i>index && candidates[i] == candidates[i-1]) { continue; }
+        Sum.push_back(candidates[i]);
+        _combinationSum2(candidates, target-candidates[i], Res, Sum, i+1);
+        Sum.pop_back();
+    }
+}
 
 /*
  * https://leetcode-cn.com/problems/my-calendar-i/
@@ -1036,4 +1061,58 @@ vector<vector<int>> MyLeetCode::subsetsWithDup(vector<int> &nums) {
     }
     return res;
 }
+
+/*
+ * https://leetcode-cn.com/problems/subarray-sum-equals-k/
+ *【专题】Array；Hash Table
+ */
+int MyLeetCode::subarraySum(vector<int> &nums, int k) {
+    map<int, int> sumMap;
+    int sum = 0, res = 0;
+    sumMap[sum] = 1;
+    for(int num : nums){
+        sum += num;
+        if(sumMap.find(sum-k) != sumMap.end()){
+            res += sumMap[sum-k];
+        }
+        sumMap[sum]++;
+    }
+    return res;
+}
+
+/*
+ * https://leetcode-cn.com/problems/sort-colors/
+ *【专题】Array；Two Pointers；Sort
+ */
+void MyLeetCode::sortColors(vector<int> &nums) {
+    int left = 0, right = nums.size() - 1;
+    int curr = 0;
+    while(curr <= right){
+        if(nums[curr] == 0 && curr > left){
+            swap(nums[curr], nums[left]);
+            left++;
+        }
+        else if(nums[curr] == 2){
+            swap(nums[curr], nums[right]);
+            right--;
+        }
+        else{
+            curr++;
+        }
+    }
+}
+
+/*
+ * https://leetcode-cn.com/problems/longest-consecutive-sequence/
+ *【专题】Array；Union Find
+ */
+int MyLeetCode::longestConsecutive(vector<int> &nums) {
+
+
+
+
+    return 0;
+}
+
+
 

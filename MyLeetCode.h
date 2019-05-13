@@ -24,7 +24,10 @@ public:
     int removeElement(vector<int>& nums, int val);
     // 39. 组合总和
     vector<vector<int>> combinationSum(vector<int>& candidates, int target);
-    void recursive(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
+    void _combinationSum(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
+    // 40. 组合总和 II
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target);
+    void _combinationSum2(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
     // 48. 旋转图像
     void rotate(vector<vector<int>>& matrix);
     // 53. 最大子序和
@@ -36,6 +39,8 @@ public:
     // 64. 最小路径和
     int minPathSum(vector<vector<int>>& grid);
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
+    // 75. 颜色分类
+    void sortColors(vector<int>& nums);
     // 78. 子集
     vector<vector<int>> subsets(vector<int>& nums);
     // 90. 子集 II
@@ -46,6 +51,8 @@ public:
     vector<int> getRow(int rowIndex);
     // 121. 买卖股票的最佳时机
     int maxProfit(vector<int>& prices);
+    // 128. 最长连续序列
+    int longestConsecutive(vector<int>& nums);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
     // 268. 缺失数字
@@ -56,6 +63,8 @@ public:
     bool isSubsequence(string s, string t);
     // 540. 有序数组中的单一元素
     int singleNonDuplicate(vector<int>& nums);
+    // 560. 和为K的子数组
+    int subarraySum(vector<int>& nums, int k);
     // 611. 有效三角形的个数
     int triangleNumber(vector<int>& nums);
     // 621. 任务调度器
