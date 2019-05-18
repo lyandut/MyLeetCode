@@ -1107,12 +1107,70 @@ void MyLeetCode::sortColors(vector<int> &nums) {
  *【专题】Array；Union Find
  */
 int MyLeetCode::longestConsecutive(vector<int> &nums) {
-
-
-
-
-    return 0;
+    map<int, int> hashMap;
+    int left, right, curr, max = 0;
+    for(int num : nums){
+        if(hashMap[num]) { continue; }
+        left = hashMap[num-1];
+        right = hashMap[num+1];
+        hashMap[num] = curr = left + right + 1;
+        hashMap[num - left] = curr;
+        hashMap[num + right] = curr;
+        max = curr > max ? curr : max;
+    }
+    return max;
 }
+
+/*
+ * https://leetcode-cn.com/problems/find-peak-element/
+ *【专题】Array；Binary Search
+ */
+int MyLeetCode::findPeakElement(vector<int> &nums) {
+    int left = 0, right = nums.size()-1, mid;
+    while(left < right){
+        mid = (left + right) / 2;
+        if(nums[mid] < nums[mid+1])
+            left = mid+1;
+        else if(mid > 0 && nums[mid] < nums[mid-1])
+            right = mid-1;
+        else
+            return mid;
+    }
+    return left;
+}
+
+/*
+ * https://leetcode-cn.com/problems/plus-one/
+ *【专题】Array
+ */
+vector<int> MyLeetCode::plusOne(vector<int> &digits) {
+    int c = 1;
+    for(int i=digits.size()-1; i>=0; i--){
+        int sum = digits[i] + c;
+        digits[i] = sum % 10;
+        c = sum / 10;
+    }
+    if(c) {digits.insert(digits.begin(), 1); }
+    return digits;
+}
+
+/*
+ * https://leetcode-cn.com/problems/find-pivot-index/
+ *【专题】Array
+ */
+int MyLeetCode::pivotIndex(vector<int> &nums) {
+    vector<int> sums;
+    sums.push_back(0);
+    for(int i=0; i<nums.size(); i++){
+        sums.push_back(sums[i] + nums[i]);
+    }
+    for(int j=0; j<nums.size(); j++){
+        if(sums[j]==sums[sums.size()-1]-sums[j+1])
+            return j;
+    }
+    return -1;
+}
+
 
 
 

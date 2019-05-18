@@ -12,7 +12,15 @@
 #include <algorithm>
 #include <tuple>
 #include <unordered_map>
+
 using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
 
 class MyLeetCode {
 public:
@@ -39,12 +47,16 @@ public:
     // 64. 最小路径和
     int minPathSum(vector<vector<int>>& grid);
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
+    // 66. 加一
+    vector<int> plusOne(vector<int>& digits);
     // 75. 颜色分类
     void sortColors(vector<int>& nums);
     // 78. 子集
     vector<vector<int>> subsets(vector<int>& nums);
     // 90. 子集 II
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
+    // 105. 从前序与中序遍历序列构造二叉树
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
     // 118. 杨辉三角
     vector<vector<int>> generate(int numRows);
     // 119. 杨辉三角 II
@@ -55,6 +67,8 @@ public:
     int longestConsecutive(vector<int>& nums);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
+    // 162. 寻找峰值
+    int findPeakElement(vector<int>& nums);
     // 268. 缺失数字
     int missingNumber(vector<int>& nums);
     // 287. 寻找重复数
@@ -77,6 +91,8 @@ public:
     vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k);
     // 717. 1比特与2比特字符
     bool isOneBitCharacter(vector<int>& bits);
+    // 724. 寻找数组的中心索引
+    int pivotIndex(vector<int>& nums);
     // 729. 我的日程安排表 I
     vector<tuple<int, int, int>> startEndInterval;
     bool book(int start, int end);
@@ -118,46 +134,5 @@ public:
 
 };
 
-// 380. 常数时间插入、删除和获取随机元素
-class RandomizedSet {
-public:
-    /** Initialize your data structure here. */
-    unordered_map<int, bool> myMap;
-    RandomizedSet() {
-    }
-
-    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
-    bool insert(int val) {
-        if(myMap[val]) { return false; }
-        myMap[val] = true;
-        return true;
-    }
-
-    /** Removes a value from the set. Returns true if the set contained the specified element. */
-    bool remove(int val) {
-        if(!myMap.count(val)) { return false; }
-        myMap.erase(val);
-        return true;
-    }
-
-    /** Get a random element from the set. */
-    int getRandom() {
-        auto iter = myMap.begin();
-        int index = rand() % myMap.size();
-        while(index){
-            iter++;
-            index--;
-        }
-        return (*iter).first;
-    }
-};
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet* obj = new RandomizedSet();
- * bool param_1 = obj->insert(val);
- * bool param_2 = obj->remove(val);
- * int param_3 = obj->getRandom();
- */
 
 #endif //MYLEETCODE_MYLEETCODE_H

@@ -3,4 +3,6 @@ project(MyLeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h)
+add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
+        RandomizedSet.h constructBinaryTreeFromPreorderAndInorderTraversal.cpp
+        )
