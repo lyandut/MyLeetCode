@@ -6,8 +6,9 @@
 
 /*
  * 26. Remove Duplicates from Sorted Array
- * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  */
+
 int MyLeetCode::removeDuplicates(vector<int> &nums) {
     if(nums.empty()) { return 0; }
     int front = 0, behind = 0;

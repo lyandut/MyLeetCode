@@ -32,6 +32,8 @@ public:
     int removeDuplicates(vector<int>& nums);
     // 27. 移除元素
     int removeElement(vector<int>& nums, int val);
+    // 35. 搜索插入位置
+    int searchInsert(vector<int>& nums, int target);
     // 39. 组合总和
     vector<vector<int>> combinationSum(vector<int>& candidates, int target);
     void _combinationSum(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
@@ -101,6 +103,8 @@ public:
     // 746. 使用最小花费爬楼梯
     int minCostClimbingStairs(vector<int>& cost);
     int _minCostClimbingStairs(vector<int> &cost, int n);
+    // 747. 至少是其他数字两倍的最大数
+    int dominantIndex(vector<int>& nums);
     // 768. 最多能完成排序的块
     int maxChunksToSorted(vector<int>& arr);
     // 769. 最多能完成排序的块 II

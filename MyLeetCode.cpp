@@ -1170,7 +1170,3 @@ int MyLeetCode::pivotIndex(vector<int> &nums) {
     }
     return -1;
 }
-
-
-
-
