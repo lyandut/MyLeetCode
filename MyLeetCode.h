@@ -115,6 +115,8 @@ public:
     int numSubarrayBoundedMax(vector<int>& A, int L, int R);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
+    // 849. 到最近的人的最大距离
+    int maxDistToClosest(vector<int>& seats);
     // 870. 优势洗牌
     vector<int> advantageCount(vector<int>& A, vector<int>& B);
     // 873. 最长的斐波那契子序列的长度
