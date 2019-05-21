@@ -7,6 +7,7 @@
 /*
  * 35. Search Insert Position
  * https://leetcode.com/problems/search-insert-position/
+ *【专题】Array
  */
 
 int MyLeetCode::searchInsert(vector<int> &nums, int target) {

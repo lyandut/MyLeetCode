@@ -55,6 +55,8 @@ public:
     vector<int> plusOne(vector<int>& digits);
     // 75. 颜色分类
     void sortColors(vector<int>& nums);
+    // 73. 矩阵置零
+    void setZeroes(vector<vector<int>>& matrix);
     // 78. 子集
     vector<vector<int>> subsets(vector<int>& nums);
     // 90. 子集 II
