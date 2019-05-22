@@ -111,6 +111,10 @@ public:
     int maxChunksToSorted(vector<int>& arr);
     // 769. 最多能完成排序的块 II
     int maxChunksToSortedII(vector<int>& arr);
+    // 782. 变为棋盘
+    int movesToChessboard(vector<vector<int>>& board);
+    bool isOpposite(vector<int> &A, vector<int> &B);
+    int calculate(vector<int> &A, int countZero, int countOne);
     // 792. 匹配子序列的单词数
     int numMatchingSubseq(string S, vector<string>& words);
     // 795. 区间子数组个数
