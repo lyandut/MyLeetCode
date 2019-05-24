@@ -89,6 +89,8 @@ public:
     int triangleNumber(vector<int>& nums);
     // 621. 任务调度器
     int leastInterval(vector<char>& tasks, int n);
+    // 643. 子数组最大平均数 I
+    double findMaxAverage(vector<int>& nums, int k);
     // 661. 图片平滑器
     vector<vector<int>> imageSmoother(vector<vector<int>>& M);
     // 670. 最大交换

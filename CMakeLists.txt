@@ -8,4 +8,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         removeDuplicatesFromSortedArray.cpp largestNumberAtLeastTwiceOfOthers.cpp
         searchInsertPosition.cpp maximizeDistanceToClosestPerson.cpp
         setMatrixZeroes.cpp transformToChessboard.cpp
-        MaximumSwap.cpp)
+        MaximumSwap.cpp maximumAverageSubarrayI.cpp)
