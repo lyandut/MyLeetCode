@@ -59,6 +59,8 @@ public:
     void setZeroes(vector<vector<int>>& matrix);
     // 78. 子集
     vector<vector<int>> subsets(vector<int>& nums);
+    // 80. 删除排序数组中的重复项 II
+    int removeDuplicatesII(vector<int>& nums);
     // 90. 子集 II
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
     // 105. 从前序与中序遍历序列构造二叉树
@@ -73,6 +75,8 @@ public:
     int longestConsecutive(vector<int>& nums);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
+    // 154. 寻找旋转排序数组中的最小值 II
+    int findMinII(vector<int>& nums);
     // 162. 寻找峰值
     int findPeakElement(vector<int>& nums);
     // 268. 缺失数字

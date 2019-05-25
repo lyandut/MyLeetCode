@@ -7,5 +7,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         RandomizedSet.h constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         removeDuplicatesFromSortedArray.cpp largestNumberAtLeastTwiceOfOthers.cpp
         searchInsertPosition.cpp maximizeDistanceToClosestPerson.cpp
-        setMatrixZeroes.cpp transformToChessboard.cpp
-        MaximumSwap.cpp maximumAverageSubarrayI.cpp)
+        setMatrixZeroes.cpp transformToChessboard.cpp MaximumSwap.cpp
+        maximumAverageSubarrayI.cpp
+        findMinimumInRotatedSortedArray.cpp findMinimumInRotatedSortedArrayII.cpp
+        removeDuplicatesFromSortedArrayII.cpp)

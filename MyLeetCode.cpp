@@ -892,21 +892,6 @@ int MyLeetCode::numSubarrayBoundedMax(vector<int> &A, int L, int R) {
 }
 
 /*
- * https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/
- *【专题】Array；Binary Search
- */
-int MyLeetCode::findMin(vector<int> &nums) {
-    if(nums.size()==1) { return nums[0]; }
-    int mid, left = 0, right = nums.size()-1;
-    while(left < right-1){
-        mid = (left+right) / 2;
-        if(nums[mid] > nums[left] && nums[mid] > nums[right]) {left = mid;}
-        else {right = mid;}
-    }
-    return min(nums[left], nums[right]);
-}
-
-/*
  * https://leetcode-cn.com/problems/partition-array-into-disjoint-intervals/
  *【专题】Array
  */
