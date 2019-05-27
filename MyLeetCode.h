@@ -69,6 +69,8 @@ public:
     vector<vector<int>> generate(int numRows);
     // 119. 杨辉三角 II
     vector<int> getRow(int rowIndex);
+    // 120. 三角形最小路径和
+    int minimumTotal(vector<vector<int>>& triangle);
     // 121. 买卖股票的最佳时机
     int maxProfit(vector<int>& prices);
     // 128. 最长连续序列

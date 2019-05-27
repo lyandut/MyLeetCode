@@ -5,9 +5,10 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         RandomizedSet.h constructBinaryTreeFromPreorderAndInorderTraversal.cpp
-        removeDuplicatesFromSortedArray.cpp largestNumberAtLeastTwiceOfOthers.cpp
+        largestNumberAtLeastTwiceOfOthers.cpp triangle.cpp
         searchInsertPosition.cpp maximizeDistanceToClosestPerson.cpp
         setMatrixZeroes.cpp transformToChessboard.cpp MaximumSwap.cpp
         maximumAverageSubarrayI.cpp
         findMinimumInRotatedSortedArray.cpp findMinimumInRotatedSortedArrayII.cpp
-        removeDuplicatesFromSortedArrayII.cpp)
+        removeDuplicatesFromSortedArray.cpp removeDuplicatesFromSortedArrayII.cpp
+        )
