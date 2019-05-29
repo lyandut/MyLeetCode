@@ -105,6 +105,8 @@ public:
     int findLengthOfLCIS(vector<int>& nums);
     // 689. 三个无重叠子数组的最大和
     vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k);
+    // 713. 乘积小于K的子数组
+    int numSubarrayProductLessThanK(vector<int>& nums, int k);
     // 717. 1比特与2比特字符
     bool isOneBitCharacter(vector<int>& bits);
     // 724. 寻找数组的中心索引

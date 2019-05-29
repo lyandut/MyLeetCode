@@ -11,4 +11,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         maximumAverageSubarrayI.cpp
         findMinimumInRotatedSortedArray.cpp findMinimumInRotatedSortedArrayII.cpp
         removeDuplicatesFromSortedArray.cpp removeDuplicatesFromSortedArrayII.cpp
-        globalAndLocalInversions.cpp)
+        globalAndLocalInversions.cpp subarrayProductLessThanK.cpp)
