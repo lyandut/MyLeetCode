@@ -133,6 +133,8 @@ public:
     int numMatchingSubseq(string S, vector<string>& words);
     // 795. 区间子数组个数
     int numSubarrayBoundedMax(vector<int>& A, int L, int R);
+    // 825. 适龄的朋友
+    int numFriendRequests(vector<int>& ages);
     // 830. 较大分组的位置
     vector<vector<int>> largeGroupPositions(string S);
     // 849. 到最近的人的最大距离
