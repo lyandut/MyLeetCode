@@ -28,6 +28,8 @@ public:
     vector<int> twoSum(vector<int>& nums, int target);
     // 11. 盛最多水的容器
     int maxArea(vector<int>& height);
+    // 20. 有效的括号
+    bool isValid(string s);
     // 26. 删除排序数组中的重复项
     int removeDuplicates(vector<int>& nums);
     // 27. 移除元素
