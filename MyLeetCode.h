@@ -89,6 +89,8 @@ public:
     int findDuplicate(vector<int>& nums);
     // 392. 判断子序列
     bool isSubsequence(string s, string t);
+    // 394. 字符串解码
+    string decodeString(string s);
     // 540. 有序数组中的单一元素
     int singleNonDuplicate(vector<int>& nums);
     // 560. 和为K的子数组
