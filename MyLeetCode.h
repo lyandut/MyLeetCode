@@ -67,6 +67,8 @@ public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
     // 105. 从前序与中序遍历序列构造二叉树
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
+    // 106. 从中序与后序遍历序列构造二叉树
+    TreeNode* buildTree2(vector<int>& inorder, vector<int>& postorder);
     // 118. 杨辉三角
     vector<vector<int>> generate(int numRows);
     // 119. 杨辉三角 II
