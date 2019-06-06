@@ -23,8 +23,9 @@ int main() {
 //    vector<vector<int>> A = {{1,1,0}, {0,0,1}, {0,0,1}};
 //    cout << myLeetCode.movesToChessboard(A);
 
-    vector<vector<int>> A = {{2},{3,4},{6,5,7},{4,1,8,3}};
-    cout << myLeetCode.minimumTotal(A);
+//    vector<vector<int>> A = {{2},{3,4},{6,5,7},{4,1,8,3}};
+//    cout << myLeetCode.minimumTotal(A);
+
     cout << endl;
     return 0;
 }
