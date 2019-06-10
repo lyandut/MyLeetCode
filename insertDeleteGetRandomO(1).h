@@ -4,8 +4,8 @@
 
 // 380. 常数时间插入、删除和获取随机元素
 
-#ifndef MYLEETCODE_RANDOMIZEDSET_H
-#define MYLEETCODE_RANDOMIZEDSET_H
+#ifndef MYLEETCODE_INSERTDELETEGETRANDOMO_1_H
+#define MYLEETCODE_INSERTDELETEGETRANDOMO_1_H
 
 #include <iostream>
 #include <unordered_map>
@@ -54,4 +54,4 @@ public:
  */
 
 
-#endif //MYLEETCODE_RANDOMIZEDSET_H
+#endif //MYLEETCODE_INSERTDELETEGETRANDOMO_1_H

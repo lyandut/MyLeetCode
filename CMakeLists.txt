@@ -4,11 +4,11 @@ project(MyLeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
-        RandomizedSet.h constructBinaryTreeFromPreorderAndInorderTraversal.cpp
+        "insertDeleteGetRandomO(1).h" constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         largestNumberAtLeastTwiceOfOthers.cpp triangle.cpp
         searchInsertPosition.cpp maximizeDistanceToClosestPerson.cpp
         setMatrixZeroes.cpp transformToChessboard.cpp MaximumSwap.cpp
         maximumAverageSubarrayI.cpp
         findMinimumInRotatedSortedArray.cpp findMinimumInRotatedSortedArrayII.cpp
         removeDuplicatesFromSortedArray.cpp removeDuplicatesFromSortedArrayII.cpp
-        globalAndLocalInversions.cpp subarrayProductLessThanK.cpp friendsOfAppropriateAges.cpp validParentheses.cpp decodeString.cpp constructBinaryTreeFromInorderAndPostorderTraversal.cpp implementTrie.h LRUCache.h)
+        globalAndLocalInversions.cpp subarrayProductLessThanK.cpp friendsOfAppropriateAges.cpp validParentheses.cpp decodeString.cpp constructBinaryTreeFromInorderAndPostorderTraversal.cpp implementTrie.h LRUCache.h addAndSearchWord.h sortArrayByParity.cpp sortArrayByParityII.cpp)

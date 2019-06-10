@@ -149,8 +149,12 @@ public:
     vector<int> advantageCount(vector<int>& A, vector<int>& B);
     // 873. 最长的斐波那契子序列的长度
     int lenLongestFibSubseq(vector<int>& A);
+    // 905. 按奇偶排序数组
+    vector<int> sortArrayByParity(vector<int>& A);
     // 915. 分割数组
     int partitionDisjoint(vector<int>& A);
+    // 922. 按奇偶排序数组 II
+    vector<int> sortArrayByParityII(vector<int>& A);
     // 926. 将字符串翻转到单调递增
     int minFlipsMonoIncr(string S);
     // 945. 使数组唯一的最小增量
