@@ -145,6 +145,8 @@ public:
     vector<vector<int>> largeGroupPositions(string S);
     // 849. 到最近的人的最大距离
     int maxDistToClosest(vector<int>& seats);
+    // 852. 山脉数组的峰顶索引
+    int peakIndexInMountainArray(vector<int>& A);
     // 870. 优势洗牌
     vector<int> advantageCount(vector<int>& A, vector<int>& B);
     // 873. 最长的斐波那契子序列的长度
@@ -161,6 +163,8 @@ public:
     int minIncrementForUnique(vector<int>& A);
     // 974. Subarray Sums Divisible by K
     int subarraysDivByK(vector<int>& A, int K);
+    // 977. 有序数组的平方
+    vector<int> sortedSquares(vector<int>& A);
     // 989. Add to Array-Form of Integer
     vector<int> addToArrayForm(vector<int>& A, int K);
     // 1007. Minimum Domino Rotations For Equal Row
