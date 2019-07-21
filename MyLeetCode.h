@@ -34,6 +34,8 @@ public:
     int removeDuplicates(vector<int>& nums);
     // 27. 移除元素
     int removeElement(vector<int>& nums, int val);
+    // 33. 搜索旋转排序数组
+    int search(vector<int>& nums, int target);
     // 35. 搜索插入位置
     int searchInsert(vector<int>& nums, int target);
     // 39. 组合总和
