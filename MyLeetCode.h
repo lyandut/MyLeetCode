@@ -65,6 +65,8 @@ public:
     vector<vector<int>> subsets(vector<int>& nums);
     // 80. 删除排序数组中的重复项 II
     int removeDuplicatesII(vector<int>& nums);
+    // 81. 搜索旋转排序数组 II
+    bool searchII(vector<int>& nums, int target);
     // 90. 子集 II
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
     // 105. 从前序与中序遍历序列构造二叉树
