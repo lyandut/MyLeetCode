@@ -4,32 +4,34 @@ project(MyLeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
-        insertDeleteGetRandomO1.h
-        largestNumberAtLeastTwiceOfOthers.cpp
-        triangle.cpp
-        searchInsertPosition.cpp
-        maximizeDistanceToClosestPerson.cpp
-        setMatrixZeroes.cpp
-        transformToChessboard.cpp
-        maximumSwap.cpp
-        maximumAverageSubarrayI.cpp
+        addAndSearchWord.h
+        constructBinaryTreeFromInorderAndPostorderTraversal.cpp
+        constructBinaryTreeFromPreorderAndInorderTraversal.cpp
+        decodeString.cpp
         findMinimumInRotatedSortedArray.cpp
         findMinimumInRotatedSortedArrayII.cpp
+        friendsOfAppropriateAges.cpp
+        globalAndLocalInversions.cpp
+        implementTrie.h
+        insertDeleteGetRandomO1.h
+        largestNumberAtLeastTwiceOfOthers.cpp
+        LRUCache.h
+        maximizeDistanceToClosestPerson.cpp
+        maximumAverageSubarrayI.cpp
+        maximumSwap.cpp
+        peakIndexInAMountainArray.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
-        globalAndLocalInversions.cpp
-        subarrayProductLessThanK.cpp
-        friendsOfAppropriateAges.cpp
-        validParentheses.cpp
-        decodeString.cpp
-        constructBinaryTreeFromPreorderAndInorderTraversal.cpp
-        constructBinaryTreeFromInorderAndPostorderTraversal.cpp
-        implementTrie.h
-        LRUCache.h
-        addAndSearchWord.h
+        searchA2DMatrix.cpp
+        searchInRotatedSortedArray.cpp
+        searchInRotatedSortedArrayII.cpp
+        searchInsertPosition.cpp
+        setMatrixZeroes.cpp
         sortArrayByParity.cpp
         sortArrayByParityII.cpp
         squaresOfASortedArray.cpp
-        peakIndexInAMountainArray.cpp
-        searchInRotatedSortedArray.cpp
-        searchInRotatedSortedArrayII.cpp)
+        subarrayProductLessThanK.cpp
+        transformToChessboard.cpp
+        triangle.cpp
+        validParentheses.cpp
+        )

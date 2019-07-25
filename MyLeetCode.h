@@ -57,6 +57,8 @@ public:
     int _minPathSum(vector<vector<int>> &grid, int m, int n);
     // 66. 加一
     vector<int> plusOne(vector<int>& digits);
+    // 74. 搜索二维矩阵
+    bool searchMatrix(vector<vector<int>>& matrix, int target);
     // 75. 颜色分类
     void sortColors(vector<int>& nums);
     // 73. 矩阵置零
