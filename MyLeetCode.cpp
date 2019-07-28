@@ -839,23 +839,6 @@ int MyLeetCode::subarraysDivByK(vector<int> &A, int K) {
 }
 
 /*
- * https://leetcode-cn.com/problems/two-sum/
- *【专题】Array；Hash Table
- */
-vector<int> MyLeetCode::twoSum(vector<int> &nums, int target) {
-    vector<int> res(2);
-    for(int i=0; i<nums.size(); i++){
-        for(int j=i+1; j<nums.size(); j++){
-            if(nums[i] + nums[j] == target){
-                res = {i, j};
-                return res;
-            }
-        }
-    }
-    return res;
-}
-
-/*
  * https://leetcode-cn.com/problems/maximum-subarray/
  *【专题】Array；Divide and Conquer；Dynamic Programming
  */

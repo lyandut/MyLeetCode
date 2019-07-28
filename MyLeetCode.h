@@ -24,10 +24,12 @@ struct TreeNode {
 
 class MyLeetCode {
 public:
-    // 1. Two Sum
+    // 1. 两数之和
     vector<int> twoSum(vector<int>& nums, int target);
     // 11. 盛最多水的容器
     int maxArea(vector<int>& height);
+    // 15. 三数之和
+    vector<vector<int>> threeSum(vector<int>& nums);
     // 20. 有效的括号
     bool isValid(string s);
     // 26. 删除排序数组中的重复项
@@ -44,6 +46,8 @@ public:
     // 40. 组合总和 II
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target);
     void _combinationSum2(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &curr, int index);
+    // 41. 缺失的第一个正数
+    int firstMissingPositive(vector<int>& nums);
     // 48. 旋转图像
     void rotate(vector<vector<int>>& matrix);
     // 53. 最大子序和
@@ -69,6 +73,8 @@ public:
     int removeDuplicatesII(vector<int>& nums);
     // 81. 搜索旋转排序数组 II
     bool searchII(vector<int>& nums, int target);
+    // 88. 合并两个有序数组
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
     // 90. 子集 II
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
     // 105. 从前序与中序遍历序列构造二叉树
@@ -85,12 +91,19 @@ public:
     int maxProfit(vector<int>& prices);
     // 128. 最长连续序列
     int longestConsecutive(vector<int>& nums);
+    // 136. 只出现一次的数字
+    int singleNumber(vector<int>& nums);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
     // 154. 寻找旋转排序数组中的最小值 II
     int findMinII(vector<int>& nums);
     // 162. 寻找峰值
     int findPeakElement(vector<int>& nums);
+    // 169. 求众数
+    int majorityElement(vector<int>& nums);
+    // 215. 数组中的第K个最大元素
+    int findKthLargest(vector<int>& nums, int k);
+    int _quickSelect(vector<int> nums, int left, int right, int k);
     // 268. 缺失数字
     int missingNumber(vector<int>& nums);
     // 287. 寻找重复数
@@ -99,6 +112,10 @@ public:
     bool isSubsequence(string s, string t);
     // 394. 字符串解码
     string decodeString(string s);
+    // 412. Fizz Buzz
+    vector<string> fizzBuzz(int n);
+    // 442. 数组中重复的数据
+    vector<int> findDuplicates(vector<int>& nums);
     // 540. 有序数组中的单一元素
     int singleNonDuplicate(vector<int>& nums);
     // 560. 和为K的子数组
