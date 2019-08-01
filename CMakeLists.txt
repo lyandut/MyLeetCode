@@ -26,6 +26,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         maximumAverageSubarrayI.cpp
         maximumSwap.cpp
         mergeSortedArray.cpp
+        nextPermutation.cpp
         peakIndexInAMountainArray.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp

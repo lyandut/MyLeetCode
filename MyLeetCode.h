@@ -36,6 +36,8 @@ public:
     int removeDuplicates(vector<int>& nums);
     // 27. 移除元素
     int removeElement(vector<int>& nums, int val);
+    // 31. 下一个排列
+    void nextPermutation(vector<int>& nums);
     // 33. 搜索旋转排序数组
     int search(vector<int>& nums, int target);
     // 35. 搜索插入位置
