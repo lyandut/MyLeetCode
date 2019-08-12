@@ -15,6 +15,14 @@
 
 using namespace std;
 
+/* Definition for singly-linked list. */
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+/* Definition for a binary tree node. */
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -32,6 +40,12 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums);
     // 20. 有效的括号
     bool isValid(string s);
+    // 21. 合并两个有序链表
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
+    // 23. 合并K个排序链表
+    ListNode* mergeKLists(vector<ListNode*>& lists);
+    // 25. K 个一组翻转链表
+    ListNode* reverseKGroup(ListNode* head, int k);
     // 26. 删除排序数组中的重复项
     int removeDuplicates(vector<int>& nums);
     // 27. 移除元素
@@ -95,6 +109,10 @@ public:
     int longestConsecutive(vector<int>& nums);
     // 136. 只出现一次的数字
     int singleNumber(vector<int>& nums);
+    // 141. 环形链表
+    bool hasCycle(ListNode *head);
+    // 142. 环形链表 II
+    ListNode *detectCycle(ListNode *head);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
     // 154. 寻找旋转排序数组中的最小值 II
@@ -103,6 +121,8 @@ public:
     int findPeakElement(vector<int>& nums);
     // 169. 求众数
     int majorityElement(vector<int>& nums);
+    // 206. 反转链表
+    ListNode* reverseList(ListNode* head);
     // 215. 数组中的第K个最大元素
     int findKthLargest(vector<int>& nums, int k);
     int _quickSelect(vector<int> nums, int left, int right, int k);

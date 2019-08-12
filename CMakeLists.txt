@@ -20,16 +20,22 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         insertDeleteGetRandomO1.h
         kthLargestElementInAnArray.cpp
         largestNumberAtLeastTwiceOfOthers.cpp
+        linkedListCycle.cpp
+        linkedListCycleII.cpp
         LRUCache.h
         majorityElement.cpp
         maximizeDistanceToClosestPerson.cpp
         maximumAverageSubarrayI.cpp
         maximumSwap.cpp
+        mergeKSortedLists.cpp
         mergeSortedArray.cpp
+        mergeTwoSortedLists.cpp
         nextPermutation.cpp
         peakIndexInAMountainArray.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
+        reverseLinkedList.cpp
+        reverseNodesInK-Group.cpp
         searchA2DMatrix.cpp
         searchInRotatedSortedArray.cpp
         searchInRotatedSortedArrayII.cpp

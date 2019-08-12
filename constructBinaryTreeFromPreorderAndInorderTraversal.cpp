@@ -5,7 +5,7 @@
 #include "MyLeetCode.h"
 
 /*
- * https://leetcode-cn.unordered_mapcom/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+ * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  *【专题】Array；Tree；Depth-first Search
  */
 TreeNode *MyLeetCode::buildTree(vector<int> &preorder, vector<int> &inorder) {
