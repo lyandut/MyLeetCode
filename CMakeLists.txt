@@ -35,6 +35,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
         reverseLinkedList.cpp
+        reverseLinkedListII.cpp
         reverseNodesInK-Group.cpp
         searchA2DMatrix.cpp
         searchInRotatedSortedArray.cpp

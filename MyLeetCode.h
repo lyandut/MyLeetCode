@@ -93,6 +93,8 @@ public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
     // 90. 子集 II
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
+    // 92. 反转链表 II
+    ListNode* reverseBetween(ListNode* curr, int m, int n);
     // 105. 从前序与中序遍历序列构造二叉树
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
     // 106. 从中序与后序遍历序列构造二叉树
