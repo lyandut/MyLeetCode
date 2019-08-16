@@ -37,6 +37,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         reverseLinkedList.cpp
         reverseLinkedListII.cpp
         reverseNodesInK-Group.cpp
+        rotateList.cpp
         searchA2DMatrix.cpp
         searchInRotatedSortedArray.cpp
         searchInRotatedSortedArrayII.cpp

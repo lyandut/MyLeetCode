@@ -70,6 +70,8 @@ public:
     int maxSubArray(vector<int>& nums);
     // 59. 螺旋矩阵 II
     vector<vector<int>> generateMatrix(int n);
+    // 61. 旋转链表
+    ListNode* rotateRight(ListNode* head, int k);
     // 62. 不同路径
     int uniquePaths(int m, int n);
     // 64. 最小路径和
