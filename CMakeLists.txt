@@ -48,8 +48,10 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         sortArrayByParityII.cpp
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
+        swapNodesInPairs.cpp
         transformToChessboard.cpp
         triangle.cpp
         twoSum.cpp
         validParentheses.cpp
+
         )

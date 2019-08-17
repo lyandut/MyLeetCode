@@ -44,6 +44,8 @@ public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
     // 23. 合并K个排序链表
     ListNode* mergeKLists(vector<ListNode*>& lists);
+    // 24. 两两交换链表中的节点
+    ListNode* swapPairs(ListNode* head);
     // 25. K 个一组翻转链表
     ListNode* reverseKGroup(ListNode* head, int k);
     // 26. 删除排序数组中的重复项
