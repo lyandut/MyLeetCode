@@ -22,6 +22,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         largestNumberAtLeastTwiceOfOthers.cpp
         linkedListCycle.cpp
         linkedListCycleII.cpp
+        longestValidParentheses.cpp
         LRUCache.h
         majorityElement.cpp
         maximizeDistanceToClosestPerson.cpp
@@ -54,4 +55,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         twoSum.cpp
         validParentheses.cpp
 
-        )
+        evaluateReversePolishNotation.cpp)

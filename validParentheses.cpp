@@ -8,7 +8,6 @@
  */
 
 #include "MyLeetCode.h"
-#include <stack>
 
 bool MyLeetCode::isValid(string s) {
     stack<char> myStack;

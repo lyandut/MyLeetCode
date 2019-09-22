@@ -8,7 +8,6 @@
  */
 
 #include "MyLeetCode.h"
-#include <stack>
 
 string MyLeetCode::decodeString(string s) {
     stack<char> myStack;

@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stack>
 #include <map>
 #include <algorithm>
 #include <tuple>
@@ -54,6 +55,8 @@ public:
     int removeElement(vector<int>& nums, int val);
     // 31. 下一个排列
     void nextPermutation(vector<int>& nums);
+    // 32. 最长有效括号
+    int longestValidParentheses(string s);
     // 33. 搜索旋转排序数组
     int search(vector<int>& nums, int target);
     // 35. 搜索插入位置
@@ -119,6 +122,8 @@ public:
     bool hasCycle(ListNode *head);
     // 142. 环形链表 II
     ListNode *detectCycle(ListNode *head);
+    // 150. 逆波兰表达式求值
+    int evalRPN(vector<string>& tokens);
     // 153. 寻找旋转排序数组中的最小值
     int findMin(vector<int>& nums);
     // 154. 寻找旋转排序数组中的最小值 II
