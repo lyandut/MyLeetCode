@@ -5,10 +5,11 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         3Sum.cpp
-        addAndSearchWord.h
+        addAndSearchWord.hpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         decodeString.cpp
+        evaluateReversePolishNotation.cpp
         findAllDuplicatesInAnArray.cpp
         findMinimumInRotatedSortedArray.cpp
         findMinimumInRotatedSortedArrayII.cpp
@@ -16,14 +17,15 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         fizzBuzz.cpp
         friendsOfAppropriateAges.cpp
         globalAndLocalInversions.cpp
-        implementTrie.h
-        insertDeleteGetRandomO1.h
+        implementQueueUsingStacks.hpp
+        implementTrie.hpp
+        insertDeleteGetRandomO1.hpp
         kthLargestElementInAnArray.cpp
         largestNumberAtLeastTwiceOfOthers.cpp
         linkedListCycle.cpp
         linkedListCycleII.cpp
         longestValidParentheses.cpp
-        LRUCache.h
+        LRUCache.hpp
         majorityElement.cpp
         maximizeDistanceToClosestPerson.cpp
         maximumAverageSubarrayI.cpp
@@ -47,6 +49,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         singleNumber.cpp
         sortArrayByParity.cpp
         sortArrayByParityII.cpp
+        sortColors.cpp
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
         swapNodesInPairs.cpp
@@ -55,4 +58,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         twoSum.cpp
         validParentheses.cpp
 
-        evaluateReversePolishNotation.cpp)
+        )

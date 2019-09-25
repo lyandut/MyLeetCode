@@ -7,8 +7,8 @@
  * https://leetcode.com/problems/implement-trie-prefix-tree/
  */
 
-#ifndef MYLEETCODE_IMPLEMENTTRIE_H
-#define MYLEETCODE_IMPLEMENTTRIE_H
+#ifndef MYLEETCODE_IMPLEMENTTRIE_HPP
+#define MYLEETCODE_IMPLEMENTTRIE_HPP
 
 #include <iostream>
 #include <string>
@@ -76,4 +76,4 @@ public:
  * bool param_3 = obj->startsWith(prefix);
  */
 
-#endif //MYLEETCODE_IMPLEMENTTRIE_H
+#endif //MYLEETCODE_IMPLEMENTTRIE_HPP

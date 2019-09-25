@@ -7,8 +7,8 @@
  * https://leetcode.com/problems/lru-cache/
  */
 
-#ifndef MYLEETCODE_LRUCACHE_H
-#define MYLEETCODE_LRUCACHE_H
+#ifndef MYLEETCODE_LRUCACHE_HPP
+#define MYLEETCODE_LRUCACHE_HPP
 
 #include <iostream>
 #include <list>
@@ -65,4 +65,4 @@ public:
  * obj->put(key,value);
  */
 
-#endif //MYLEETCODE_LRUCACHE_H
+#endif //MYLEETCODE_LRUCACHE_HPP

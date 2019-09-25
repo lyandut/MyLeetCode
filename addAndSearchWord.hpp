@@ -2,8 +2,8 @@
 // Created by liyan on 2019-06-10.
 //
 
-#ifndef MYLEETCODE_ADDANDSEARCHWORD_H
-#define MYLEETCODE_ADDANDSEARCHWORD_H
+#ifndef MYLEETCODE_ADDANDSEARCHWORD_HPP
+#define MYLEETCODE_ADDANDSEARCHWORD_HPP
 
 #include <iostream>
 #include <string>
@@ -35,4 +35,4 @@ public:
  * bool param_2 = obj->search(word);
  */
 
-#endif //MYLEETCODE_ADDANDSEARCHWORD_H
+#endif //MYLEETCODE_ADDANDSEARCHWORD_HPP

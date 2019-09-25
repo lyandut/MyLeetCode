@@ -26,6 +26,9 @@ int main() {
 //    vector<vector<int>> A = {{2},{3,4},{6,5,7},{4,1,8,3}};
 //    cout << myLeetCode.minimumTotal(A);
 
+    vector<vector<int>> obstacles{{5, 5}, {9, 4}, {9, 7}, {6, 4}, {7, 0}, {9, 5}, {10, 7}, {1, 1}, {7, 5}};
+    myLeetCode.robot("RRU", obstacles, 1486, 743);
+
     cout << endl;
     return 0;
 }

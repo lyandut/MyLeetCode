@@ -1049,28 +1049,6 @@ int MyLeetCode::subarraySum(vector<int> &nums, int k) {
 }
 
 /*
- * https://leetcode-cn.com/problems/sort-colors/
- *【专题】Array；Two Pointers；Sort
- */
-void MyLeetCode::sortColors(vector<int> &nums) {
-    int left = 0, right = nums.size() - 1;
-    int curr = 0;
-    while(curr <= right){
-        if(nums[curr] == 0 && curr > left){
-            swap(nums[curr], nums[left]);
-            left++;
-        }
-        else if(nums[curr] == 2){
-            swap(nums[curr], nums[right]);
-            right--;
-        }
-        else{
-            curr++;
-        }
-    }
-}
-
-/*
  * https://leetcode-cn.com/problems/longest-consecutive-sequence/
  *【专题】Array；Union Find
  */
@@ -1137,4 +1115,99 @@ int MyLeetCode::pivotIndex(vector<int> &nums) {
             return j;
     }
     return -1;
+}
+
+/*
+ * 2019 力扣杯全国秋季编程大赛
+ */
+// 2. 分式化简
+vector<int> MyLeetCode::fraction(vector<int>& cont) {
+    int fenzi = 1;
+    int fenmu = cont.back();
+    for(int i = cont.size() - 1; i > 0; --i){
+        int front = cont[i - 1];
+        int curr = fenmu;
+        fenmu = front * curr + fenzi;
+        fenzi = curr;
+    }
+    return {fenmu, fenzi};
+}
+
+// 3. 机器人大冒险
+bool MyLeetCode::robot(string command, vector<vector<int>>& obstacles, int x, int y) {
+    int ox = 0, oy = 0;
+    auto obstaclesX(obstacles);
+    auto obstaclesY(obstacles);
+    sort(obstaclesX.begin(), obstaclesX.end(),
+            [](vector<int>& lhs, vector<int>& rhs) { return lhs[0] > rhs[0]; });
+    sort(obstaclesY.begin(), obstaclesY.end(),
+            [](vector<int>& lhs, vector<int>& rhs) { return lhs[1] > rhs[1]; });
+    while(1) {
+        for(auto ch : command) {
+            // 移动
+            if(ch == 'U') { ++oy; }
+            else if(ch == 'R') { ++ox; }
+            else { return false; }
+            // 边界检测
+            if(ox == x && oy == y) { return true; }
+            if(ox > x || oy > y) { return false; }
+            // 障碍检测
+            while (!obstaclesX.empty() && ox >= obstaclesX.back()[0] && oy != obstaclesX.back()[1]) {
+                obstaclesX.pop_back();
+            }
+            if (!obstaclesX.empty() && ox == obstaclesX.back()[0] && oy == obstaclesX.back()[1]) {
+                return false;
+            }
+            while (!obstaclesY.empty() && oy >= obstaclesY.back()[1] && ox != obstaclesY.back()[0]) {
+                obstaclesY.pop_back();
+            }
+            if (!obstaclesY.empty() && ox == obstaclesY.back()[0] && oy == obstaclesY.back()[1]) {
+                return false;
+            }
+        }
+    }
+}
+
+// 5. 发 LeetCoin
+void recursiveBonus(vector<int>& coinList, unordered_map<int, vector<int>>& leaderShipMap, int leader, int coins) {
+    coinList[leader] += coins;
+    if(leaderShipMap.find(leader) == leaderShipMap.end()) { return; }
+    for(int subLeader : leaderShipMap[leader]) {
+        recursiveBonus(coinList, leaderShipMap, subLeader, coins);
+    }
+}
+
+int recursiveSum(vector<int>& coinList, unordered_map<int, vector<int>>& leaderShipMap, int leader) {
+    if(leaderShipMap.find(leader) == leaderShipMap.end()) { return coinList[leader]; }
+    int sum = coinList[leader];
+    for(int subLeader : leaderShipMap[leader]) {
+        sum += recursiveSum(coinList, leaderShipMap, subLeader);
+    }
+    return sum;
+}
+
+vector<int> MyLeetCode::bonus(int n, vector<vector<int>>& leadership, vector<vector<int>>& operations) {
+    vector<int> res;
+
+    // 建立领导关系
+    unordered_map<int, vector<int>> leaderShipMap;
+    for(auto & each_pair : leadership) {
+        leaderShipMap[each_pair[0]].push_back(each_pair[1]);
+    }
+
+    // 执行 operations
+    vector<int> coinList(n+1, 0);
+    for(auto & op : operations) {
+        if(op[0] == 1) {
+            coinList[op[1]] += op[2];
+        }
+        else if (op[0] == 2) {
+            recursiveBonus(coinList, leaderShipMap, op[1], op[2]);
+        }
+        else if (op[0] == 3) {
+            res.push_back(recursiveSum(coinList, leaderShipMap, op[1]));
+        }
+    }
+
+    return res;
 }

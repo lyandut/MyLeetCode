@@ -232,6 +232,17 @@ public:
     // 1018. Binary Prefix Divisible By 5
     vector<bool> prefixesDivBy5(vector<int>& A);
 
+    /*
+     * 2019 力扣杯全国秋季编程大赛
+     */
+    // 2. 分式化简
+    vector<int> fraction(vector<int>& cont);
+    // 3. 机器人大冒险
+    bool robot(string command, vector<vector<int>>& obstacles, int x, int y);
+
+    // 5. 发 LeetCoin
+    vector<int> bonus(int n, vector<vector<int>>& leadership, vector<vector<int>>& operations);
+
 };
 
 
