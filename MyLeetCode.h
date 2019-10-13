@@ -9,6 +9,7 @@
 #include <vector>
 #include <string>
 #include <stack>
+#include <deque>
 #include <map>
 #include <algorithm>
 #include <tuple>
@@ -137,6 +138,8 @@ public:
     // 215. 数组中的第K个最大元素
     int findKthLargest(vector<int>& nums, int k);
     int _quickSelect(vector<int> nums, int left, int right, int k);
+    // 239. 滑动窗口最大值
+    vector<int> maxSlidingWindow(vector<int>& nums, int k);
     // 268. 缺失数字
     int missingNumber(vector<int>& nums);
     // 287. 寻找重复数

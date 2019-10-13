@@ -9,6 +9,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         decodeString.cpp
+        designCircularDeque.hpp
         evaluateReversePolishNotation.cpp
         findAllDuplicatesInAnArray.cpp
         findMinimumInRotatedSortedArray.cpp
@@ -47,6 +48,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         searchInsertPosition.cpp
         setMatrixZeroes.cpp
         singleNumber.cpp
+        slidingWindowMaximum.cpp
         sortArrayByParity.cpp
         sortArrayByParityII.cpp
         sortColors.cpp
