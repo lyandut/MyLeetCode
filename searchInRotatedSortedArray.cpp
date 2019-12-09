@@ -57,16 +57,14 @@ int binarySearch(vector<int> &nums, int start, int end, int target) {
 int MyLeetCode::search(vector<int> &nums, int target) {
     int l = 0, r = nums.size() - 1, mid;
     int rotation_index = 0;
-    while (l < r && nums[l] > nums[r]) {
+    while (l < r) {
         mid = (l + r) / 2;
         if (nums[mid] > nums[mid+1]) {
             rotation_index = mid + 1;
             break;
         }
-        else {
-            if (nums[mid] > nums[l]) { l = mid; }
-            if (nums[mid] < nums[r]) { r = mid; }
-        }
+        if (nums[mid] > nums[l]) { l = mid; }
+        if (nums[mid] < nums[r]) { r = mid; }
     }
     int l_res = binarySearch(nums, 0, rotation_index - 1, target);
     int r_res = binarySearch(nums, rotation_index, nums.size() - 1, target);
