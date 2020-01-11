@@ -613,21 +613,6 @@ vector<int> MyLeetCode::getRow(int rowIndex) {
 }
 
 /*
- * https://leetcode-cn.com/problems/task-scheduler/
- *【专题】Array；Greedy；Queue
- */
-int MyLeetCode::leastInterval(vector<char> &tasks, int n) {
-    vector<int> taskCout(26, 0);
-    int maxLength = 0;
-    for(auto i : tasks){
-        taskCout[i - 'A']++;
-        maxLength = max(taskCout[i - 'A'], maxLength);
-    }
-    int taskKind = count(taskCout.begin(), taskCout.end(), maxLength);
-    return max((n+1) * (maxLength-1) + taskKind, (int)tasks.size());
-}
-
-/*
  * https://leetcode.com/problems/binary-prefix-divisible-by-5/
  *【专题】Array
  */
@@ -836,23 +821,6 @@ int MyLeetCode::subarraysDivByK(vector<int> &A, int K) {
         res += each * (each-1) / 2;
     }
     return res;
-}
-
-/*
- * https://leetcode-cn.com/problems/maximum-subarray/
- *【专题】Array；Divide and Conquer；Dynamic Programming
- */
-int MyLeetCode::maxSubArray(vector<int> &nums) {
-    vector<int> dp(nums.size()+1, INT_MIN);
-    for(int i=0; i<nums.size(); i++){
-        if(dp[i] < 0){
-            dp[i+1] = nums[i];
-        }
-        else{
-            dp[i+1] = dp[i]+nums[i];
-        }
-    }
-    return *max_element(dp.begin(), dp.end());
 }
 
 /*

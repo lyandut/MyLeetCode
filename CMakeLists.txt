@@ -30,6 +30,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         majorityElement.cpp
         maximizeDistanceToClosestPerson.cpp
         maximumAverageSubarrayI.cpp
+        maximumSubarray.cpp
         maximumSwap.cpp
         mergeKSortedLists.cpp
         mergeSortedArray.cpp
@@ -55,6 +56,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
         swapNodesInPairs.cpp
+        taskScheduler.cpp
         transformToChessboard.cpp
         triangle.cpp
         twoSum.cpp
