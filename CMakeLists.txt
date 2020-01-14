@@ -18,6 +18,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         fizzBuzz.cpp
         friendsOfAppropriateAges.cpp
         globalAndLocalInversions.cpp
+        houseRobber.cpp
         implementQueueUsingStacks.hpp
         implementTrie.hpp
         insertDeleteGetRandomO1.hpp
@@ -62,4 +63,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         twoSum.cpp
         validParentheses.cpp
 
-        )
+        burstBalloons.cpp)

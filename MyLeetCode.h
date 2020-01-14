@@ -133,6 +133,8 @@ public:
     int findPeakElement(vector<int>& nums);
     // 169. 求众数
     int majorityElement(vector<int>& nums);
+    // 198. 打家劫舍
+    int rob(vector<int>& nums);
     // 206. 反转链表
     ListNode* reverseList(ListNode* head);
     // 215. 数组中的第K个最大元素
@@ -144,6 +146,8 @@ public:
     int missingNumber(vector<int>& nums);
     // 287. 寻找重复数
     int findDuplicate(vector<int>& nums);
+    // 312. 戳气球
+    int maxCoins(vector<int>& nums);
     // 392. 判断子序列
     bool isSubsequence(string s, string t);
     // 394. 字符串解码
