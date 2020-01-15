@@ -115,6 +115,10 @@ public:
     int minimumTotal(vector<vector<int>>& triangle);
     // 121. 买卖股票的最佳时机
     int maxProfit(vector<int>& prices);
+    // 122. 买卖股票的最佳时机 II
+    int maxProfitII(vector<int>& prices);
+    // 123. 买卖股票的最佳时机 III
+    int maxProfitIII(vector<int>& prices);
     // 128. 最长连续序列
     int longestConsecutive(vector<int>& nums);
     // 136. 只出现一次的数字

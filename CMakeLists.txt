@@ -6,6 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         3Sum.cpp
         addAndSearchWord.hpp
+        bestTimeToBuyAndSellStock.cpp
+        bestTimeToBuyAndSellStockII.cpp
+        bestTimeToBuyAndSellStockIII.cpp
+        burstBalloons.cpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         decodeString.cpp
@@ -62,5 +66,4 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         triangle.cpp
         twoSum.cpp
         validParentheses.cpp
-
-        burstBalloons.cpp)
+        )
