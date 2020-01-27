@@ -10,10 +10,12 @@
 #include <string>
 #include <stack>
 #include <deque>
+#include <set>
 #include <map>
-#include <algorithm>
-#include <tuple>
 #include <unordered_map>
+#include <tuple>
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -242,6 +244,8 @@ public:
     int maxScoreSightseeingPair(vector<int>& A);
     // 1018. Binary Prefix Divisible By 5
     vector<bool> prefixesDivBy5(vector<int>& A);
+    // 1036. 逃离大迷宫
+    bool isEscapePossible(vector<vector<int>>& blocked, vector<int>& source, vector<int>& target);
 
     /*
      * 2019 力扣杯全国秋季编程大赛
