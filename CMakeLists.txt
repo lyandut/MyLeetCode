@@ -9,11 +9,13 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         bestTimeToBuyAndSellStock.cpp
         bestTimeToBuyAndSellStockII.cpp
         bestTimeToBuyAndSellStockIII.cpp
+        bestTimeToBuyAndSellStockIV.cpp
         burstBalloons.cpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         decodeString.cpp
         designCircularDeque.hpp
+        escapeALargeMaze.cpp
         evaluateReversePolishNotation.cpp
         findAllDuplicatesInAnArray.cpp
         findMinimumInRotatedSortedArray.cpp
@@ -66,4 +68,5 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         triangle.cpp
         twoSum.cpp
         validParentheses.cpp
-        escapeALargeMaze.cpp)
+
+        )

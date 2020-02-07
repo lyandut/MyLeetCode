@@ -27,7 +27,7 @@
  * 2. 动态规划
  * dp[第 i_th 天][是否持有股票]
  * dp[i][0] = max(dp[i-1][0], dp[i-1][1]+prices[i]) // 保持 或 卖出
- * dp[i][1] = max(dp[i-1][1], dp[i-1][0]-prices[i]) // 保持 或 买入
+ * dp[i][1] = max(dp[i-1][1], -prices[i])           // 保持 或 买入（只能完成一笔交易）
  */
 int MyLeetCode::maxProfit(vector<int> &prices) {
     if (prices.empty()) return 0;
@@ -39,7 +39,7 @@ int MyLeetCode::maxProfit(vector<int> &prices) {
     // 动态规划填表
     for (int i = 1; i < n; ++i) {
         dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
-        dp[i][1] = max(dp[i - 1][1], -prices[i]); // 只能完成一笔交易
+        dp[i][1] = max(dp[i - 1][1], -prices[i]);
     }
     return dp[n - 1][0];
 }

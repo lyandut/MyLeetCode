@@ -11,6 +11,7 @@
 #include <stack>
 #include <deque>
 #include <set>
+#include <unordered_set>
 #include <map>
 #include <unordered_map>
 #include <tuple>
@@ -139,6 +140,8 @@ public:
     int findPeakElement(vector<int>& nums);
     // 169. 求众数
     int majorityElement(vector<int>& nums);
+    // 188. 买卖股票的最佳时机 IV
+    int maxProfitIV(int k, vector<int>& prices);
     // 198. 打家劫舍
     int rob(vector<int>& nums);
     // 206. 反转链表
