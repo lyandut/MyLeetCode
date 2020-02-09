@@ -75,6 +75,8 @@ public:
     int firstMissingPositive(vector<int>& nums);
     // 48. 旋转图像
     void rotate(vector<vector<int>>& matrix);
+    // 51. N皇后
+    vector<vector<string>> solveNQueens(int n);
     // 53. 最大子序和
     int maxSubArray(vector<int>& nums);
     // 59. 螺旋矩阵 II

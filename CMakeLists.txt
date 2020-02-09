@@ -43,6 +43,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         mergeSortedArray.cpp
         mergeTwoSortedLists.cpp
         nextPermutation.cpp
+        nQueens.cpp
         peakIndexInAMountainArray.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
