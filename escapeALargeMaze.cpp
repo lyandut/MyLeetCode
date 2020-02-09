@@ -10,12 +10,12 @@
  *  BFS/DFS
  */
 
-vector<vector<int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+static vector<vector<int>> dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
 // Ps：如果写在内类成为成员函数，必须加 static 成为静态成员函数
-string trans_op(const vector<int> &coord) { return to_string(coord[0]) + "," + to_string(coord[1]); }
+static string trans_op(const vector<int> &coord) { return to_string(coord[0]) + "," + to_string(coord[1]); }
 
-bool dfs(vector<int> &source, vector<int> &target, vector<int> &curr, unordered_set<string> &blocked_set, unordered_set<string> &visited) {
+static bool dfs(vector<int> &source, vector<int> &target, vector<int> &curr, unordered_set<string> &blocked_set, unordered_set<string> &visited) {
     // curr == target，到达终点
     if (curr[0] == target[0] && curr[1] == target[1])
         return true;

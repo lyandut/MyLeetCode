@@ -8,6 +8,32 @@
  * 782. Transform to Chessboard
  * https://leetcode.com/problems/transform-to-chessboard/
  */
+static bool isOpposite(vector<int> &A, vector<int> &B){
+    if(A.size() != B.size()) { return false; }
+    for(int i=0; i<A.size(); ++i){
+        if(A[i]+B[i] != 1){
+            return false;
+        }
+    }
+    return true;
+}
+
+static int calculate(vector<int> &A, int countZero, int countOne){
+    int zeroStartCount = 0;
+    for(int i=0; i<A.size(); ++i){
+        if(A[i] == i % 2) { zeroStartCount++; }
+    }
+    int oneStartCount = A.size() - zeroStartCount;
+    if(zeroStartCount % 2){
+        return oneStartCount;
+    }
+    else if(oneStartCount % 2){
+        return zeroStartCount;
+    }
+    else{
+        return min(zeroStartCount, oneStartCount);
+    }
+}
 
 int MyLeetCode::movesToChessboard(vector<vector<int>> &board) {
     int rowLength = board.size(), colLength = board[0].size();
@@ -35,31 +61,4 @@ int MyLeetCode::movesToChessboard(vector<vector<int>> &board) {
     res += calculate(firRow, rowZero, rowOne);
     res += calculate(firCol, colZero, colOne);
     return res / 2;
-}
-
-bool MyLeetCode::isOpposite(vector<int> &A, vector<int> &B){
-    if(A.size() != B.size()) { return false; }
-    for(int i=0; i<A.size(); ++i){
-        if(A[i]+B[i] != 1){
-            return false;
-        }
-    }
-    return true;
-}
-
-int MyLeetCode::calculate(vector<int> &A, int countZero, int countOne){
-    int zeroStartCount = 0;
-    for(int i=0; i<A.size(); ++i){
-        if(A[i] == i % 2) { zeroStartCount++; }
-    }
-    int oneStartCount = A.size() - zeroStartCount;
-    if(zeroStartCount % 2){
-        return oneStartCount;
-    }
-    else if(oneStartCount % 2){
-        return zeroStartCount;
-    }
-    else{
-        return min(zeroStartCount, oneStartCount);
-    }
 }

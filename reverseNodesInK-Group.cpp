@@ -10,7 +10,7 @@
  */
 
 /// reverseLinkedList
-ListNode* _reverseKGroup(ListNode* head) {
+static ListNode* _reverseKGroup(ListNode* head) {
     ListNode *prev = nullptr, *curr = head, *back;
     while (curr) {
         back = curr->next;

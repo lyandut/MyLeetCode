@@ -23,26 +23,26 @@
 //}
 
 /// 递归一：
-//ListNode* _reverseList(ListNode *head, ListNode *prev = nullptr){
-//    if (head == nullptr) { return prev; }
-//    ListNode *back = head->next;
-//    head->next = prev;
-//    return _reverseList(back, head);
-//}
-//
-//ListNode* MyLeetCode::reverseList(ListNode *head) {
-//    return _reverseList(head);
-//}
+static ListNode* _reverseList(ListNode *head, ListNode *prev = nullptr){
+    if (head == nullptr) { return prev; }
+    ListNode *back = head->next;
+    head->next = prev;
+    return _reverseList(back, head);
+}
+
+ListNode* MyLeetCode::reverseList(ListNode *head) {
+    return _reverseList(head);
+}
 
 
 /// 递归二：
-ListNode* MyLeetCode::reverseList(ListNode *head) {
-    if(head == nullptr || head->next == nullptr) { return head; }
-    ListNode *new_head = reverseList(head->next);
-    head->next->next = head;
-    head->next = nullptr;
-    return new_head;
-}
+//ListNode* MyLeetCode::reverseList(ListNode *head) {
+//    if(head == nullptr || head->next == nullptr) { return head; }
+//    ListNode *new_head = reverseList(head->next);
+//    head->next->next = head;
+//    head->next = nullptr;
+//    return new_head;
+//}
 
 
 

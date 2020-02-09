@@ -8,12 +8,7 @@
  * 215. Kth Largest Element in an Array
  * https://leetcode.com/problems/kth-largest-element-in-an-array/
  */
-
-int MyLeetCode::findKthLargest(vector<int> &nums, int k) {
-    return _quickSelect(nums, 0, nums.size()-1, k-1);
-}
-
-int MyLeetCode::_quickSelect(vector<int> nums, int left, int right, int k) {
+static int _quickSelect(vector<int> nums, int left, int right, int k) {
     int origin_left = left, origin_right = right;
     int pivot = nums[origin_right];
     while (left < right) {
@@ -26,7 +21,6 @@ int MyLeetCode::_quickSelect(vector<int> nums, int left, int right, int k) {
     nums[origin_right] = nums[left];
     nums[left] = pivot;
 
-
     if (k == left) {
         return nums[left];
     }
@@ -36,4 +30,8 @@ int MyLeetCode::_quickSelect(vector<int> nums, int left, int right, int k) {
     else {
         return _quickSelect(nums, origin_left, left-1, k);
     }
+}
+
+int MyLeetCode::findKthLargest(vector<int> &nums, int k) {
+    return _quickSelect(nums, 0, nums.size() - 1, k - 1);
 }

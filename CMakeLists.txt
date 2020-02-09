@@ -4,37 +4,50 @@ project(MyLeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
+        1bitAnd2bitCharacters.cpp
         3Sum.cpp
         addAndSearchWord.hpp
+        bestSightseeingPair.cpp
         bestTimeToBuyAndSellStock.cpp
         bestTimeToBuyAndSellStockII.cpp
         bestTimeToBuyAndSellStockIII.cpp
         bestTimeToBuyAndSellStockIV.cpp
         burstBalloons.cpp
+        coinBonus.cpp
+        combinationSum.cpp
+        combinationSumII.cpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         decodeString.cpp
+        deepDarkFraction.cpp
         designCircularDeque.hpp
         escapeALargeMaze.cpp
         evaluateReversePolishNotation.cpp
         findAllDuplicatesInAnArray.cpp
         findMinimumInRotatedSortedArray.cpp
         findMinimumInRotatedSortedArrayII.cpp
+        findTheDuplicateNumber.cpp
         firstMissingPositive.cpp
         fizzBuzz.cpp
+        flipStringToMonotoneIncreasing.cpp
         friendsOfAppropriateAges.cpp
         globalAndLocalInversions.cpp
         houseRobber.cpp
+        imageSmoother.cpp
         implementQueueUsingStacks.hpp
         implementTrie.hpp
         insertDeleteGetRandomO1.hpp
+        isSubsequence.cpp
         kthLargestElementInAnArray.cpp
         largestNumberAtLeastTwiceOfOthers.cpp
+        lengthOfLongestFibonacciSubsequence.cpp
         linkedListCycle.cpp
         linkedListCycleII.cpp
         longestValidParentheses.cpp
         LRUCache.hpp
         majorityElement.cpp
+        maxChunksToMakeSorted.cpp
+        maxChunksToMakeSortedII.cpp
         maximizeDistanceToClosestPerson.cpp
         maximumAverageSubarrayI.cpp
         maximumSubarray.cpp
@@ -42,25 +55,36 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         mergeKSortedLists.cpp
         mergeSortedArray.cpp
         mergeTwoSortedLists.cpp
+        minCostClimbingStairs.cpp
+        minimumDominoRotationsForEqualRow.cpp
+        minimumPathSum.cpp
+        missingNumber.cpp
+        myCalendarI.hpp
         nextPermutation.cpp
         nQueens.cpp
+        pascalTriangle.cpp
         peakIndexInAMountainArray.cpp
+        positionsOfLargeGroups.cpp
+        programmableRobot.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
         reverseLinkedList.cpp
         reverseLinkedListII.cpp
         reverseNodesInK-Group.cpp
+        rotateImage.cpp
         rotateList.cpp
         searchA2DMatrix.cpp
         searchInRotatedSortedArray.cpp
         searchInRotatedSortedArrayII.cpp
         searchInsertPosition.cpp
         setMatrixZeroes.cpp
+        singleElementInASortedArray.cpp
         singleNumber.cpp
         slidingWindowMaximum.cpp
         sortArrayByParity.cpp
         sortArrayByParityII.cpp
         sortColors.cpp
+        spiralMatrixII.cpp
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
         swapNodesInPairs.cpp
@@ -68,6 +92,7 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         transformToChessboard.cpp
         triangle.cpp
         twoSum.cpp
+        uniquePaths.cpp
         validParentheses.cpp
 
         )

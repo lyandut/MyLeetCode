@@ -40,7 +40,7 @@ int MyLeetCode::longestValidParentheses(string s){
 /*
  * 有效括号对总数
  */
-int totalValidParentheses(string s) {
+static int totalValidParentheses(string s) {
     stack<int> myStack;
     myStack.push(0);
     for(auto ch : s) {

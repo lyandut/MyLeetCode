@@ -29,9 +29,9 @@ bool MyLeetCode::isIdealPermutation(vector<int> &A) {
  * 如果乱序数组中某个数字和其坐标差的绝对值大于1，则一定存在非局部倒置的全局倒置。
  * Runtime: 60 ms, faster than 91.80% submissions.
  */
-bool isIdealPermutation(vector<int> &A) {
-    for(int i=0; i<A.size(); ++i){
-        if(abs(A[i] - i) > 1) { return false; }
-    }
-    return true;
-}
+//bool MyLeetCode::isIdealPermutation(vector<int> &A) {
+//    for(int i=0; i<A.size(); ++i){
+//        if(abs(A[i] - i) > 1) { return false; }
+//    }
+//    return true;
+//}

@@ -20,7 +20,7 @@
  * 完成一次交易至少需要2天，当最大交易次数 > 天数/2 时，可以认为是允许任意交易，即交易次数无限大
  */
 
-int maxProfitIV_v1(int m, vector<int> &prices) {
+static int maxProfitIV_v1(int m, vector<int> &prices) {
     int n = prices.size(); // 天数
     vector<vector<vector<int>>> dp(n, vector<vector<int>>(m + 1, vector<int>(2, -1)));
     // 初始化 base case
@@ -48,7 +48,7 @@ int maxProfitIV_v1(int m, vector<int> &prices) {
  * 对于算例 m=0, prices={1,3} 能通过, 其实是 vector<int> 初始化时默认值为0
  * 如果指定初值为-1，vector<vector<vector<int>>> dp(n, vector<vector<int>>(m + 1, vector<int>(2, -1))); 则不能通过
  */
-int maxProfitIV_v2(int m, vector<int> &prices) {
+static int maxProfitIV_v2(int m, vector<int> &prices) {
     int n = prices.size(); // 天数
     vector<vector<vector<int>>> dp(n, vector<vector<int>>(m + 1, vector<int>(2)));
     // 初始化 base case

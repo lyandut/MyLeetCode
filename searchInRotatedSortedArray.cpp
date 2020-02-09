@@ -43,7 +43,7 @@
 /*
  * ② 先找到旋转点rotation_index，再进行二分查找
  */
-int binarySearch(vector<int> &nums, int start, int end, int target) {
+static int binarySearch(vector<int> &nums, int start, int end, int target) {
     int l = start, r = end, mid;
     while (l <= r) {
         mid = (l + r) / 2;

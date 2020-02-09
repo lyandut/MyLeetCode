@@ -27,7 +27,7 @@
 
 
 /// 公共函数：mergeTwolists
-ListNode* _mergeTwolists(ListNode* l1, ListNode* l2) {
+static ListNode* _mergeTwolists(ListNode* l1, ListNode* l2) {
     ListNode *dummy = new ListNode(0);
     ListNode *newHead = dummy;
     while (l1 && l2) {
@@ -67,7 +67,7 @@ ListNode* _mergeTwolists(ListNode* l1, ListNode* l2) {
 * Runtime: 28 ms
 * Memory Usage: 20.2 MB
 */
-ListNode* _mergeKLists(vector<ListNode*>& lists, int l, int r) {
+static ListNode* _mergeKLists(vector<ListNode*>& lists, int l, int r) {
     if (l == r) { return lists[l]; }
     int mid = (l+r) / 2;
     ListNode *l1 = _mergeKLists(lists, l, mid);
