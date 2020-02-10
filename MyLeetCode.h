@@ -5,37 +5,7 @@
 #ifndef MYLEETCODE_MYLEETCODE_H
 #define MYLEETCODE_MYLEETCODE_H
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <stack>
-#include <deque>
-#include <set>
-#include <unordered_set>
-#include <map>
-#include <unordered_map>
-#include <tuple>
-#include <algorithm>
-#include <cmath>
-
-using namespace std;
-
-/* Definition for singly-linked list. */
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
-/* Definition for a binary tree node. */
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
+#include "DataStructureDefinition.h"
 
 class MyLeetCode {
 public:
@@ -234,6 +204,9 @@ public:
     // 560. 和为K的子数组
     static int subarraySum(vector<int> &nums, int k);
 
+    // 589. N叉树的前序遍历
+    static vector<int> preorder(Node* root);
+
     // 611. 有效三角形的个数
     static int triangleNumber(vector<int> &nums);
 
@@ -254,6 +227,9 @@ public:
 
     // 689. 三个无重叠子数组的最大和
     static vector<int> maxSumOfThreeSubarrays(vector<int> &nums, int k);
+
+    // 695. 岛屿的最大面积
+    static int maxAreaOfIsland(vector<vector<int>>& grid);
 
     // 713. 乘积小于K的子数组
     static int numSubarrayProductLessThanK(vector<int> &nums, int k);

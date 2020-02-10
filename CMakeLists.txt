@@ -3,21 +3,25 @@ project(MyLeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
+add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         1bitAnd2bitCharacters.cpp
         3Sum.cpp
         addAndSearchWord.hpp
+        addToArrayFormOfInteger.cpp
+        advantageShuffle.cpp
         bestSightseeingPair.cpp
         bestTimeToBuyAndSellStock.cpp
         bestTimeToBuyAndSellStockII.cpp
         bestTimeToBuyAndSellStockIII.cpp
         bestTimeToBuyAndSellStockIV.cpp
+        binaryPrefixDivisibleBy5.cpp
         burstBalloons.cpp
         coinBonus.cpp
         combinationSum.cpp
         combinationSumII.cpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
+        containerWithMostWater.cpp
         decodeString.cpp
         deepDarkFraction.cpp
         designCircularDeque.hpp
@@ -26,6 +30,8 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         findAllDuplicatesInAnArray.cpp
         findMinimumInRotatedSortedArray.cpp
         findMinimumInRotatedSortedArrayII.cpp
+        findPeakElement.cpp
+        findPivotIndex.cpp
         findTheDuplicateNumber.cpp
         firstMissingPositive.cpp
         fizzBuzz.cpp
@@ -43,6 +49,8 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         lengthOfLongestFibonacciSubsequence.cpp
         linkedListCycle.cpp
         linkedListCycleII.cpp
+        longestConsecutiveSequence.cpp
+        longestContinuousIncreasingSubsequence.cpp
         longestValidParentheses.cpp
         LRUCache.hpp
         majorityElement.cpp
@@ -51,23 +59,33 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         maximizeDistanceToClosestPerson.cpp
         maximumAverageSubarrayI.cpp
         maximumSubarray.cpp
+        maximumSumOf3NonOverlappingSubarrays.cpp
         maximumSwap.cpp
         mergeKSortedLists.cpp
         mergeSortedArray.cpp
         mergeTwoSortedLists.cpp
         minCostClimbingStairs.cpp
         minimumDominoRotationsForEqualRow.cpp
+        minimumIncrementToMakeArrayUnique.cpp
         minimumPathSum.cpp
         missingNumber.cpp
         myCalendarI.hpp
+        naryTreePreorderTraversal.cpp
         nextPermutation.cpp
         nQueens.cpp
+        numberOfMatchingSubsequences.cpp
+        numberOfSubarraysWithBoundedMaximum.cpp
+        pairsOfSongsWithTotalDurationsDivisibleBy60.cpp
+        partitionArrayIntoDisjointIntervals.cpp
         pascalTriangle.cpp
+        pascalTriangleII.cpp
         peakIndexInAMountainArray.cpp
+        plusOne.cpp
         positionsOfLargeGroups.cpp
         programmableRobot.cpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
+        removeElement.cpp
         reverseLinkedList.cpp
         reverseLinkedListII.cpp
         reverseNodesInK-Group.cpp
@@ -87,6 +105,10 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         spiralMatrixII.cpp
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
+        subarraySumEqualsK.cpp
+        subarraySumsDivisibleByK.cpp
+        subsets.cpp
+        subsetsII.cpp
         swapNodesInPairs.cpp
         taskScheduler.cpp
         transformToChessboard.cpp
@@ -94,5 +116,6 @@ add_executable(MyLeetCode main.cpp MyLeetCode.cpp MyLeetCode.h
         twoSum.cpp
         uniquePaths.cpp
         validParentheses.cpp
+        validTriangleNumber.cpp
 
-        )
+        maxAreaOfIsland.cpp)
