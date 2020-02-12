@@ -6,10 +6,12 @@
 #define MYLEETCODE_DATASTRUCTUREDEFINITION_H
 
 #include <iostream>
-#include <vector>
 #include <string>
+#include <cstring>
+#include <vector>
 #include <stack>
 #include <deque>
+#include <list>
 #include <set>
 #include <unordered_set>
 #include <map>
@@ -35,6 +37,16 @@ struct TreeNode {
     TreeNode *right;
 
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+/* Definition for a trie node. */
+struct TrieNode {
+    bool isWord;
+    TrieNode *children[26];
+
+    TrieNode() : isWord(false) {
+        memset(children, 0, sizeof(children));
+    }
 };
 
 /* Definition for a Node. */

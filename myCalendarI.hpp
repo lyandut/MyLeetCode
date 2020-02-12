@@ -11,15 +11,13 @@
  * 优化：二分查找插入、BST
  */
 
-#include <vector>
-#include <tuple>
-
-using namespace std;
+#include "DataStructureDefinition.h"
 
 class MyCalendar {
-public:
+private:
     vector<tuple<int, int, int>> startEndInterval;
 
+public:
     MyCalendar() {}
 
     bool book(int start, int end) {

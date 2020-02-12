@@ -10,17 +10,16 @@
  * https://leetcode.com/problems/implement-queue-using-stacks/
  */
 
-#include <stack>
-
-using namespace std;
+#include "DataStructureDefinition.h"
 
 class MyQueue {
-public:
+private:
     stack<int> s1;
     stack<int> s2;
 
+public:
     /** Initialize your data structure here. */
-    MyQueue() { }
+    MyQueue() {}
 
     /** Push element x to the back of queue. */
     void push(int x) {

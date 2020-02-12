@@ -9,6 +9,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         addAndSearchWord.hpp
         addToArrayFormOfInteger.cpp
         advantageShuffle.cpp
+        allOneDataStructure.hpp
         bestSightseeingPair.cpp
         bestTimeToBuyAndSellStock.cpp
         bestTimeToBuyAndSellStockII.cpp
@@ -54,6 +55,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         longestValidParentheses.cpp
         LRUCache.hpp
         majorityElement.cpp
+        maxAreaOfIsland.cpp
         maxChunksToMakeSorted.cpp
         maxChunksToMakeSortedII.cpp
         maximizeDistanceToClosestPerson.cpp
@@ -118,4 +120,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
 
-        maxAreaOfIsland.cpp)
+        )

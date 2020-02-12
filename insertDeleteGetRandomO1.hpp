@@ -7,28 +7,26 @@
 #ifndef MYLEETCODE_INSERTDELETEGETRANDOMO1_HPP
 #define MYLEETCODE_INSERTDELETEGETRANDOMO1_HPP
 
-#include <iostream>
-#include <unordered_map>
-
-using namespace std;
+#include "DataStructureDefinition.h"
 
 class RandomizedSet {
+private:
+    unordered_map<int, bool> myMap;
+
 public:
     /** Initialize your data structure here. */
-    unordered_map<int, bool> myMap;
-    RandomizedSet() {
-    }
+    RandomizedSet() {}
 
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     bool insert(int val) {
-        if(myMap[val]) { return false; }
+        if (myMap[val]) { return false; }
         myMap[val] = true;
         return true;
     }
 
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     bool remove(int val) {
-        if(!myMap.count(val)) { return false; }
+        if (!myMap.count(val)) { return false; }
         myMap.erase(val);
         return true;
     }
@@ -37,7 +35,7 @@ public:
     int getRandom() {
         auto iter = myMap.begin();
         int index = rand() % myMap.size();
-        while(index){
+        while (index) {
             iter++;
             index--;
         }

@@ -10,23 +10,9 @@
 #ifndef MYLEETCODE_IMPLEMENTTRIE_HPP
 #define MYLEETCODE_IMPLEMENTTRIE_HPP
 
-#include <iostream>
-#include <string>
-#include <cstring>
-
-using namespace std;
-
-struct TrieNode {
-    bool isWord;
-    TrieNode *children[26];
-    TrieNode() : isWord(false) {
-        memset(children, NULL, sizeof(children));
-    }
-};
-
+#include "DataStructureDefinition.h"
 
 class Trie {
-
 private:
     TrieNode *root;
 
@@ -39,11 +25,11 @@ public:
     /** Inserts a word into the trie. */
     void insert(string word) {
         TrieNode *p = root;
-        for(char ch : word){
-            if(p->children[ch-'a'] == nullptr){
-                p->children[ch-'a'] = new TrieNode();
+        for (char ch : word) {
+            if (p->children[ch - 'a'] == nullptr) {
+                p->children[ch - 'a'] = new TrieNode();
             }
-            p = p->children[ch-'a'];
+            p = p->children[ch - 'a'];
         }
         p->isWord = true;
     }
@@ -51,9 +37,9 @@ public:
     /** Returns if the word is in the trie. */
     bool search(string word) {
         TrieNode *p = root;
-        for(char ch : word){
-            if(p->children[ch-'a'] == nullptr) { return false; }
-            p = p->children[ch-'a'];
+        for (char ch : word) {
+            if (p->children[ch - 'a'] == nullptr) { return false; }
+            p = p->children[ch - 'a'];
         }
         return p->isWord;
     }
@@ -61,9 +47,9 @@ public:
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         TrieNode *p = root;
-        for(char ch : prefix){
-            if(p->children[ch-'a'] == nullptr) { return false; }
-            p = p->children[ch-'a'];
+        for (char ch : prefix) {
+            if (p->children[ch - 'a'] == nullptr) { return false; }
+            p = p->children[ch - 'a'];
         }
         return true;
     }

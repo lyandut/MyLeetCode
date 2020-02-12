@@ -7,13 +7,10 @@
 #ifndef MYLEETCODE_DESIGNCIRCULARDEQUE_HPP
 #define MYLEETCODE_DESIGNCIRCULARDEQUE_HPP
 
-#include <iostream>
-#include <vector>
-
-using namespace std;
+#include "DataStructureDefinition.h"
 
 class MyCircularDeque {
-public:
+private:
     vector<int> _vec;
     int _head;
     int _tail;
