@@ -10,7 +10,7 @@
  * https://leetcode.com/problems/all-oone-data-structure/
  */
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class AllOne {
 private:

@@ -3,7 +3,7 @@ project(MyLeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
+add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         1bitAnd2bitCharacters.cpp
         3Sum.cpp
         addAndSearchWord.hpp
@@ -85,6 +85,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         plusOne.cpp
         positionsOfLargeGroups.cpp
         programmableRobot.cpp
+        randomPickIndex.hpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
         removeElement.cpp
@@ -120,4 +121,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureDefinition.h main.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
 
-        )
+        linkedListRandomNode.hpp)

@@ -7,7 +7,7 @@
 #ifndef MYLEETCODE_DESIGNCIRCULARDEQUE_HPP
 #define MYLEETCODE_DESIGNCIRCULARDEQUE_HPP
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class MyCircularDeque {
 private:

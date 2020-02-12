@@ -7,7 +7,7 @@
 #ifndef MYLEETCODE_INSERTDELETEGETRANDOMO1_HPP
 #define MYLEETCODE_INSERTDELETEGETRANDOMO1_HPP
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class RandomizedSet {
 private:

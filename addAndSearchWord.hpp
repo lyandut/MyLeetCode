@@ -10,7 +10,7 @@
 #ifndef MYLEETCODE_ADDANDSEARCHWORD_HPP
 #define MYLEETCODE_ADDANDSEARCHWORD_HPP
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class WordDictionary {
 private:

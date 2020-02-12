@@ -10,7 +10,7 @@
 #ifndef MYLEETCODE_IMPLEMENTTRIE_HPP
 #define MYLEETCODE_IMPLEMENTTRIE_HPP
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class Trie {
 private:

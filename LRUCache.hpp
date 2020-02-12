@@ -10,7 +10,7 @@
 #ifndef MYLEETCODE_LRUCACHE_HPP
 #define MYLEETCODE_LRUCACHE_HPP
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class LRUCache {
 private:

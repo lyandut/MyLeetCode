@@ -5,7 +5,7 @@
 #ifndef MYLEETCODE_MYLEETCODE_H
 #define MYLEETCODE_MYLEETCODE_H
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class MyLeetCode {
 public:

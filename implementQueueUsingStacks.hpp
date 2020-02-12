@@ -10,7 +10,7 @@
  * https://leetcode.com/problems/implement-queue-using-stacks/
  */
 
-#include "DataStructureDefinition.h"
+#include "DataStructureAndAlgorithm.h"
 
 class MyQueue {
 private:

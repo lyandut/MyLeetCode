@@ -2,13 +2,14 @@
 // Created by 李研 on 2020/2/10.
 //
 
-#ifndef MYLEETCODE_DATASTRUCTUREDEFINITION_H
-#define MYLEETCODE_DATASTRUCTUREDEFINITION_H
+#ifndef MYLEETCODE_DATASTRUCTUREANDALGORITHM_H
+#define MYLEETCODE_DATASTRUCTUREANDALGORITHM_H
 
 #include <iostream>
+#include <cstdlib>
+#include <vector>
 #include <string>
 #include <cstring>
-#include <vector>
 #include <stack>
 #include <deque>
 #include <list>
@@ -67,4 +68,4 @@ public:
     }
 };
 
-#endif //MYLEETCODE_DATASTRUCTUREDEFINITION_H
+#endif //MYLEETCODE_DATASTRUCTUREANDALGORITHM_H
