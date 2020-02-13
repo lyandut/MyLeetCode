@@ -11,6 +11,7 @@
 #include <string>
 #include <cstring>
 #include <stack>
+#include <queue>
 #include <deque>
 #include <list>
 #include <set>
@@ -19,6 +20,7 @@
 #include <unordered_map>
 #include <tuple>
 #include <algorithm>
+#include <numeric>
 #include <cmath>
 
 using namespace std;

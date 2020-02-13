@@ -69,6 +69,9 @@ public:
     // 53. 最大子序和
     static int maxSubArray(vector<int> &nums);
 
+    // 56. 合并区间
+    static vector<vector<int>> merge(vector<vector<int>> &intervals);
+
     // 59. 螺旋矩阵 II
     static vector<vector<int>> generateMatrix(int n);
 
@@ -201,11 +204,14 @@ public:
     // 540. 有序数组中的单一元素
     static int singleNonDuplicate(vector<int> &nums);
 
+    // 547. 朋友圈
+    static int findCircleNum(vector<vector<int>> &M);
+
     // 560. 和为K的子数组
     static int subarraySum(vector<int> &nums, int k);
 
     // 589. N叉树的前序遍历
-    static vector<int> preorder(Node* root);
+    static vector<int> preorder(Node *root);
 
     // 611. 有效三角形的个数
     static int triangleNumber(vector<int> &nums);
@@ -229,7 +235,7 @@ public:
     static vector<int> maxSumOfThreeSubarrays(vector<int> &nums, int k);
 
     // 695. 岛屿的最大面积
-    static int maxAreaOfIsland(vector<vector<int>>& grid);
+    static int maxAreaOfIsland(vector<vector<int>> &grid);
 
     // 713. 乘积小于K的子数组
     static int numSubarrayProductLessThanK(vector<int> &nums, int k);

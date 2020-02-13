@@ -29,6 +29,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         escapeALargeMaze.cpp
         evaluateReversePolishNotation.cpp
         findAllDuplicatesInAnArray.cpp
+        findMedianFromDataStream.hpp
         findMinimumInRotatedSortedArray.cpp
         findMinimumInRotatedSortedArrayII.cpp
         findPeakElement.cpp
@@ -37,6 +38,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         firstMissingPositive.cpp
         fizzBuzz.cpp
         flipStringToMonotoneIncreasing.cpp
+        friendCircles.cpp
         friendsOfAppropriateAges.cpp
         globalAndLocalInversions.cpp
         houseRobber.cpp
@@ -50,6 +52,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         lengthOfLongestFibonacciSubsequence.cpp
         linkedListCycle.cpp
         linkedListCycleII.cpp
+        linkedListRandomNode.hpp
         longestConsecutiveSequence.cpp
         longestContinuousIncreasingSubsequence.cpp
         longestValidParentheses.cpp
@@ -63,6 +66,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         maximumSubarray.cpp
         maximumSumOf3NonOverlappingSubarrays.cpp
         maximumSwap.cpp
+        mergeIntervals.cpp
         mergeKSortedLists.cpp
         mergeSortedArray.cpp
         mergeTwoSortedLists.cpp
@@ -121,4 +125,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
 
-        linkedListRandomNode.hpp)
+        )
