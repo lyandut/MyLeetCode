@@ -9,6 +9,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode380 {
+
 class RandomizedSet {
 private:
     unordered_map<int, bool> myMap;
@@ -42,6 +44,8 @@ public:
         return (*iter).first;
     }
 };
+
+}
 
 /**
  * Your RandomizedSet object will be instantiated and called as such:

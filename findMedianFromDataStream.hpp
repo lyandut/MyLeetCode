@@ -13,6 +13,8 @@
  * [两个优先队列找中位数]
  */
 
+namespace leetcode295 {
+
 class MedianFinder {
 private:
     priority_queue<int> max_heap;
@@ -42,6 +44,8 @@ public:
         return max_heap.size() == min_heap.size() ? 0.5 * (max_heap.top() + min_heap.top()) : max_heap.top();
     }
 };
+
+}
 
 /**
  * Your MedianFinder object will be instantiated and called as such:

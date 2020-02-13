@@ -12,6 +12,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode432 {
+
 class AllOne {
 private:
     struct CountNode {
@@ -85,6 +87,8 @@ private:
             _l.erase(lit);
     }
 };
+
+}
 
 /**
  * Your AllOne object will be instantiated and called as such:

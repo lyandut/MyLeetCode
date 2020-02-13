@@ -12,6 +12,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode232 {
+
 class MyQueue {
 private:
     stack<int> s1;
@@ -55,6 +57,8 @@ public:
         return s1.empty() && s2.empty();
     }
 };
+
+}
 
 /**
  * Your MyQueue object will be instantiated and called as such:

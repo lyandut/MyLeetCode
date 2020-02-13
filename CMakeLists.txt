@@ -90,6 +90,8 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         positionsOfLargeGroups.cpp
         programmableRobot.cpp
         randomPickIndex.hpp
+        rangeSumQueryImmutable.hpp
+        rangeSumQueryMutable.hpp
         removeDuplicatesFromSortedArray.cpp
         removeDuplicatesFromSortedArrayII.cpp
         removeElement.cpp

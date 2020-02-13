@@ -12,6 +12,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode208 {
+
 class Trie {
 private:
     TrieNode *root;
@@ -54,6 +56,8 @@ public:
         return true;
     }
 };
+
+}
 
 /**
  * Your Trie object will be instantiated and called as such:

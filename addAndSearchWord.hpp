@@ -12,6 +12,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode211 {
+
 class WordDictionary {
 private:
     TrieNode *root;
@@ -59,6 +61,8 @@ public:
         }
     }
 };
+
+}
 
 /**
  * Your WordDictionary object will be instantiated and called as such:

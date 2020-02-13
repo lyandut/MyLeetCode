@@ -13,6 +13,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode729 {
+
 class MyCalendar {
 private:
     vector<tuple<int, int, int>> startEndInterval;
@@ -47,6 +49,8 @@ public:
         return false;
     }
 };
+
+}
 
 /**
  * Your MyCalendar object will be instantiated and called as such:

@@ -12,6 +12,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode146 {
+
 class LRUCache {
 private:
     using PairList = list<pair<int, int>>;
@@ -50,6 +52,8 @@ public:
         }
     }
 };
+
+}
 
 /**
  * Your LRUCache object will be instantiated and called as such:

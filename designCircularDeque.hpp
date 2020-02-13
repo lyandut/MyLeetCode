@@ -9,6 +9,8 @@
 
 #include "DataStructureAndAlgorithm.h"
 
+namespace leetcode641 {
+
 class MyCircularDeque {
 private:
     vector<int> _vec;
@@ -76,6 +78,8 @@ public:
         return (_tail + 1) % _size == _head;
     }
 };
+
+}
 
 /**
  * Your MyCircularDeque object will be instantiated and called as such:
