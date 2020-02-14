@@ -174,6 +174,12 @@ public:
     // 206. 反转链表
     static ListNode *reverseList(ListNode *head);
 
+    // 207. 课程表
+    static bool canFinish(int numCourses, vector<vector<int>> &prerequisites);
+
+    // 210. 课程表 II
+    static vector<int> findOrder(int numCourses, vector<vector<int>> &prerequisites);
+
     // 215. 数组中的第K个最大元素
     static int findKthLargest(vector<int> &nums, int k);
 
@@ -189,6 +195,9 @@ public:
     // 312. 戳气球
     static int maxCoins(vector<int> &nums);
 
+    // 315. 计算右侧小于当前元素的个数
+    static vector<int> countSmaller(vector<int> &nums);
+
     // 392. 判断子序列
     static bool isSubsequence(string s, string t);
 
@@ -197,6 +206,9 @@ public:
 
     // 412. Fizz Buzz
     static vector<string> fizzBuzz(int n);
+
+    // 416. 分割等和子集
+    static bool canPartition(vector<int> &nums);
 
     // 442. 数组中重复的数据
     static vector<int> findDuplicates(vector<int> &nums);

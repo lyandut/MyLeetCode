@@ -127,4 +127,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
 
-        )
+        countOfSmallerNumbersAfterSelf.cpp courseSchedule.cpp courseScheduleII.cpp partitionEqualSubsetSum.cpp)
