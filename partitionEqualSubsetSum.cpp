@@ -34,4 +34,22 @@ bool MyLeetCode::canPartition(vector<int> &nums) {
     int sum = accumulate(nums.begin(), nums.end(), 0);
     if (sum % 2) return false;
     return _backtrack(nums, 0, sum / 2);
+    // return _knapsack(nums, 0, sum / 2);
 }
+
+// 动态规划
+//bool MyLeetCode::canPartition(vector<int> &nums) {
+//    int sum = accumulate(nums.begin(), nums.end(), 0);
+//    if (sum % 2) return false;
+//    int target = sum / 2;
+//    vector<bool> dp(target + 1, false);
+//    // 初始化 base case
+//    dp[0] = true;
+//    // 动态规划填表
+//    for (auto num: nums) {
+//        for (int i = target; i > 0; --i) { // 正序遍历会导致后趋依赖前趋，不满足“只使用一次”的约束
+//            if (i >= num) dp[i] = dp[i] || dp[i - num];
+//        }
+//    }
+//    return dp[target];
+//}

@@ -23,6 +23,10 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         constructBinaryTreeFromInorderAndPostorderTraversal.cpp
         constructBinaryTreeFromPreorderAndInorderTraversal.cpp
         containerWithMostWater.cpp
+        countOfSmallerNumbersAfterSelf.cpp
+        courseSchedule.cpp
+        courseScheduleII.cpp
+        courseScheduleIII.cpp
         decodeString.cpp
         deepDarkFraction.cpp
         designCircularDeque.hpp
@@ -83,6 +87,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         numberOfSubarraysWithBoundedMaximum.cpp
         pairsOfSongsWithTotalDurationsDivisibleBy60.cpp
         partitionArrayIntoDisjointIntervals.cpp
+        partitionEqualSubsetSum.cpp
         pascalTriangle.cpp
         pascalTriangleII.cpp
         peakIndexInAMountainArray.cpp
@@ -112,6 +117,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         sortArrayByParityII.cpp
         sortColors.cpp
         spiralMatrixII.cpp
+        splitArrayLargestSum.cpp
         squaresOfASortedArray.cpp
         subarrayProductLessThanK.cpp
         subarraySumEqualsK.cpp
@@ -127,4 +133,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
 
-        countOfSmallerNumbersAfterSelf.cpp courseSchedule.cpp courseScheduleII.cpp partitionEqualSubsetSum.cpp)
+        )

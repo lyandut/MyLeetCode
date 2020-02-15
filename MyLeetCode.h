@@ -204,6 +204,9 @@ public:
     // 394. 字符串解码
     static string decodeString(string s);
 
+    // 410. 分割数组的最大值
+    static int splitArray(vector<int> &nums, int m);
+
     // 412. Fizz Buzz
     static vector<string> fizzBuzz(int n);
 
@@ -230,6 +233,9 @@ public:
 
     // 621. 任务调度器
     static int leastInterval(vector<char> &tasks, int n);
+
+    // 630. 课程表 III
+    int scheduleCourse(vector<vector<int>> &courses);
 
     // 643. 子数组最大平均数 I
     static double findMaxAverage(vector<int> &nums, int k);
