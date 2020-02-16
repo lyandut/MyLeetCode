@@ -70,4 +70,37 @@ public:
     }
 };
 
+/* Definition for Binary Index Tree. */
+class FenwickTree {
+public:
+    FenwickTree(int n) : _partial_sum(n + 1, 0) {}
+
+    FenwickTree(const vector<int> &nums) : FenwickTree(nums.size()) {
+        for (int i = 0; i < nums.size(); ++i)
+            update(i + 1, nums[i]);
+    }
+
+    void update(int i, int delta) {
+        while (i < _partial_sum.size()) {
+            _partial_sum[i] += delta;
+            i += lowbit(i); // 更新树：父节点index = 子节点index + lowbit(子节点index)
+        }
+    }
+
+    int query(int i) const {
+        int prefix_sum = 0;
+        while (i > 0) {
+            prefix_sum += _partial_sum[i];
+            i -= lowbit(i); // 查找树：父节点index = 子节点index - lowbit(子节点index)
+        }
+        return prefix_sum;
+    }
+
+private:
+    static inline int lowbit(int i) { return i & (-i); }
+
+private:
+    vector<int> _partial_sum;
+};
+
 #endif //MYLEETCODE_DATASTRUCTUREANDALGORITHM_H

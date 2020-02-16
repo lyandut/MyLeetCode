@@ -8,12 +8,15 @@
 /*
  * 307. Range Sum Query - Mutable
  * https://leetcode.com/problems/range-sum-query-mutable/
- * [线段树]
+ * [线段树 | 树状数组]
  */
 
 #include "DataStructureAndAlgorithm.h"
 
-namespace leetcode307 {
+/*
+ * 解法一：线段树
+ */
+namespace leetcode307_1 {
 
 class NumArray {
 private:
@@ -56,6 +59,31 @@ public:
             jIndex /= 2;
         }
         return sum;
+    }
+};
+
+}
+
+/*
+ * 解法二：树状数组
+ */
+namespace leetcode307_2 {
+
+class NumArray {
+private:
+    vector<int> _nums;
+    FenwickTree _tree;
+
+public:
+    NumArray(vector<int> &nums) : _nums(move(nums)), _tree(_nums) {}
+
+    void update(int i, int val) {
+        _tree.update(i + 1, val - _nums[i]);
+        _nums[i] = val;
+    }
+
+    int sumRange(int i, int j) {
+        return _tree.query(j + 1) - _tree.query(i);
     }
 };
 

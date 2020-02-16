@@ -5,11 +5,14 @@
 /*
  * 315. Count of Smaller Numbers After Self
  * https://leetcode.com/problems/count-of-smaller-numbers-after-self/
- * [归并排序]
+ * [归并排序 | 树状数组]
  */
 
 #include "MyLeetCode.h"
 
+/*
+ * 解法一：归并排序
+ */
 using ValIndexPair = pair<int, int>;
 
 static void
@@ -58,3 +61,27 @@ vector<int> MyLeetCode::countSmaller(vector<int> &nums) {
     mergeSort(items, 0, nums.size() - 1, counts);
     return counts;
 }
+
+/*
+ * 解法二：树状数组
+ */
+//vector<int> MyLeetCode::countSmaller(vector<int> &nums) {
+//    // 使用 set 排序并去重
+//    set<int> sorted(nums.begin(), nums.end());
+//    // 使用 unordered_map 映射元素的 rank
+//    unordered_map<int, int> ranks;
+//    int rank = 0;
+//    for (int num : sorted) { ranks[num] = ++rank; }
+//
+//    vector<int> ans;
+//    FenwickTree tree(ranks.size());
+//    // 倒序遍历
+//    for (auto r_iter = nums.rbegin(); r_iter != nums.rend(); ++r_iter) {
+//        int rank = ranks[(*r_iter)];
+//        // 求小于当前 rank 的 rank 出现频率的和，往 ans 数组头部插入
+//        ans.insert(ans.begin(), tree.query(rank - 1));
+//        // 当前 rank 频率 +1
+//        tree.update(rank, 1);
+//    }
+//    return ans;
+//}
