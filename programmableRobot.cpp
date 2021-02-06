@@ -9,36 +9,28 @@
  * https://leetcode-cn.com/problems/programmable-robot/
  */
 
+static string to_track(int x, int y, const int xx, const int yy) {
+    int k = min(x / xx, y / yy);
+    x -= k * xx;
+    y -= k * yy;
+    return to_string(x) + "," + to_string(y);
+}
+
 bool MyLeetCode::robot(string command, vector<vector<int>> &obstacles, int x, int y) {
-    int ox = 0, oy = 0;
-    auto obstaclesX(obstacles);
-    auto obstaclesY(obstacles);
-    sort(obstaclesX.begin(), obstaclesX.end(),
-         [](vector<int> &lhs, vector<int> &rhs) { return lhs[0] > rhs[0]; });
-    sort(obstaclesY.begin(), obstaclesY.end(),
-         [](vector<int> &lhs, vector<int> &rhs) { return lhs[1] > rhs[1]; });
-    while (1) {
-        for (auto ch : command) {
-            // 移动
-            if (ch == 'U') { ++oy; }
-            else if (ch == 'R') { ++ox; }
-            else { return false; }
-            // 边界检测
-            if (ox == x && oy == y) { return true; }
-            if (ox > x || oy > y) { return false; }
-            // 障碍检测
-            while (!obstaclesX.empty() && ox >= obstaclesX.back()[0] && oy != obstaclesX.back()[1]) {
-                obstaclesX.pop_back();
-            }
-            if (!obstaclesX.empty() && ox == obstaclesX.back()[0] && oy == obstaclesX.back()[1]) {
-                return false;
-            }
-            while (!obstaclesY.empty() && oy >= obstaclesY.back()[1] && ox != obstaclesY.back()[0]) {
-                obstaclesY.pop_back();
-            }
-            if (!obstaclesY.empty() && ox == obstaclesY.back()[0] && oy == obstaclesY.back()[1]) {
-                return false;
-            }
-        }
+    unordered_set<string> track;
+    track.insert("0,0");
+    int xx = 0, yy = 0;
+    for (char ch : command) {
+        if (ch == 'R') ++xx;
+        if (ch == 'U') ++yy;
+        track.insert(to_string(xx) + "," + to_string(yy));
     }
+
+    if (track.count(to_track(x, y, xx, yy)) == 0) return false;
+
+    for (auto &obs : obstacles) {
+        if (obs[0] > x || obs[1] > y) continue;
+        if (track.count(to_track(obs[0], obs[1], xx, yy))) return false;
+    }
+    return true;
 }
