@@ -39,17 +39,27 @@ int main() {
 //    vector<int> target = {0, 2};
 //    cout << MyLeetCode::isEscapePossible(blocked, source, target);
 
-    vector<vector<int>> leadership{{1, 2},
-                                   {1, 6},
-                                   {2, 3},
-                                   {2, 5},
-                                   {1, 4}};
-    vector<vector<int>> operations{{1, 1, 500},
-                                   {2, 2, 50},
-                                   {3, 1},
-                                   {2, 6, 15},
-                                   {3, 1}};
-    vector<int> res = MyLeetCode::bonus(6, leadership, operations);
+//    vector<vector<int>> leadership{{1, 2},
+//                                   {1, 6},
+//                                   {2, 3},
+//                                   {2, 5},
+//                                   {1, 4}};
+//    vector<vector<int>> operations{{1, 1, 500},
+//                                   {2, 2, 50},
+//                                   {3, 1},
+//                                   {2, 6, 15},
+//                                   {3, 1}};
+//    vector<int> res = MyLeetCode::bonus(6, leadership, operations);
+//    copy(res.begin(), res.end(), ostream_iterator<int>(cout, " "));
+
+    vector<vector<int>> increase{{2,  8, 4},
+                                 {2,  5, 0},
+                                 {10, 9, 8}};
+    vector<vector<int>> requirements{{2,  11, 3},
+                                     {15, 10, 7},
+                                     {9,  17, 12},
+                                     {8,  1,  14}};
+    vector<int> res = MyLeetCode::getTriggerTime(increase, requirements);
     copy(res.begin(), res.end(), ostream_iterator<int>(cout, " "));
 
     cout << endl;

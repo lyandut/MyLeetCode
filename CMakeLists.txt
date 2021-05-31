@@ -51,6 +51,7 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         implementTrie.hpp
         insertDeleteGetRandomO1.hpp
         isSubsequence.cpp
+        juQingHongFaShiJian.cpp
         kthLargestElementInAnArray.cpp
         largestNumberAtLeastTwiceOfOthers.cpp
         lengthOfLongestFibonacciSubsequence.cpp
@@ -132,5 +133,4 @@ add_executable(MyLeetCode MyLeetCode.h DataStructureAndAlgorithm.h main.cpp
         uniquePaths.cpp
         validParentheses.cpp
         validTriangleNumber.cpp
-
         )

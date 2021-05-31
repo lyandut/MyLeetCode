@@ -354,6 +354,9 @@ public:
 
     // LCP 5. 发 LeetCoin
     static vector<int> bonus(int n, vector<vector<int>> &leadership, vector<vector<int>> &operations);
+
+    // LCP 8. 剧情触发时间
+    static vector<int> getTriggerTime(vector<vector<int>>& increase, vector<vector<int>>& requirements);
 };
 
 
